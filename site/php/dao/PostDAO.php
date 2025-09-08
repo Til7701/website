@@ -2,13 +2,13 @@
 
 namespace dao;
 
-use model\Post;
+use model\PostEntry;
 
 interface PostDAO
 {
 
     function findAllInHierarchy(): array;
 
-    function findByPath(string $path): ?Post;
+    function findByPath(string $path): ?PostEntry;
 
 }

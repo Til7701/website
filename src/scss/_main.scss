@@ -5,6 +5,8 @@ main {
     align-items: flex-start;
     padding: 2rem;
     box-sizing: border-box;
+    overflow: scroll;
+    max-height: 100%;
 
     .content-inner {
         width: 50%;
@@ -29,6 +31,27 @@ main {
 
         a:hover, a:focus {
             text-decoration: underline;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        padding: 1rem;
+        justify-content: start;
+
+        .content-inner {
+            width: 100%;
+        }
+
+        .toc {
+            width: 100%;
+            margin: 1rem 0 0 0;
+            position: static;
+            max-height: none;
+            padding-right: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
     }
 }

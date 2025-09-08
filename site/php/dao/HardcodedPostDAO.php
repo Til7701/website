@@ -21,7 +21,7 @@ class HardcodedPostDAO implements PostDAO
         return $this->posts;
     }
 
-    public function findByPath(string $path): ?Post
+    public function findByPath(string $path): ?PostEntry
     {
         foreach ($this->posts as $entry) {
             $result = $this->findByPathInEntry($entry, $path);
@@ -32,13 +32,16 @@ class HardcodedPostDAO implements PostDAO
         return null;
     }
 
-    private function findByPathInEntry(PostEntry $entry, string $path): ?Post
+    private function findByPathInEntry(PostEntry $entry, string $path): ?PostEntry
     {
         if ($entry instanceof Post) {
             if ($entry->getPath() === $path) {
                 return $entry;
             }
         } elseif ($entry instanceof PostGroup) {
+            if ($entry->getPath() === $path) {
+                return $entry;
+            }
             foreach ($entry->getPosts() as $subEntry) {
                 $result = $this->findByPathInEntry($subEntry, $path);
                 if ($result !== null) {
@@ -57,31 +60,40 @@ class HardcodedPostDAO implements PostDAO
                 "from-markdown/home.html",
                 []
             ),
-            new PostGroup("Guides", [
-                new Post("/guides/java-packaging",
-                    "Java Packaging",
-                    "from-markdown/guides/java-packaging.html",
-                    []
-                ),
-                new Post("/guides/product2",
-                    "Product 2",
-                    "product2.php",
-                    []
-                ),
-            ]),
-            new Post("/about",
-                "About",
-                "about.php",
+            new PostGroup("/guides",
+                "Guides",
+                "guides.php",
+                [],
+                [
+                    new Post("/guides/java-packaging",
+                        "Java Packaging",
+                        "from-markdown/guides/java-packaging.html",
+                        []
+                    ),
+                    new Post("/guides/product2",
+                        "Product 2",
+                        "product2.php",
+                        []
+                    ),
+                ]),
+            new Post("/long",
+                "Long Post",
+                "from-markdown/long.html",
                 []
             ),
-            new Post("/contact",
-                "Contact",
-                "contact.php",
+            new Post("/imprint",
+                "Imprint",
+                "footer/imprint.php",
                 []
             ),
-            new Post("/blog",
-                "Blog",
-                "blog.php",
+            new Post("/privacy-policy",
+                "Privacy Policy",
+                "footer/privacy.php",
+                []
+            ),
+            new Post("/terms-of-service",
+                "Terms of Service",
+                "footer/terms.php",
                 []
             ),
         ];

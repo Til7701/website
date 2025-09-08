@@ -33,6 +33,7 @@ class IndexController
         } else {
             http_response_code(404);
             $view = (new View())
+                ->setPostHierarchy($posts)
                 ->setTemplates(array("navigation.php", "error/postNotFound.php"))
                 ->setTitle("Page not found");
         }

@@ -2,14 +2,14 @@
 
 namespace view;
 
-use model\Post;
+use model\PostEntry;
 
 class View
 {
 
     private array $templates = array();
     private array $postHierarchy = array();
-    private ?Post $currentPost = null;
+    private ?PostEntry $currentPost = null;
     private string $title = "Til7701";
     private array $cssFiles = array();
     private array $jsFiles = array();
@@ -26,7 +26,7 @@ class View
         return $this;
     }
 
-    public function setCurrentPost(Post $currentPost): View
+    public function setCurrentPost(PostEntry $currentPost): View
     {
         $this->currentPost = $currentPost;
         return $this;
