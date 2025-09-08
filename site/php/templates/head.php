@@ -10,7 +10,6 @@
     <link rel="icon" href="/favicon.svg" type="image/x-icon"/>
     <!-- common styles: -->
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/nav.css">
     <!-- page-specific styles: -->
     <?php foreach ($cssFiles as $cssFile) { ?>
         <link rel="stylesheet" type="text/css" href="css/<?= $cssFile ?>.css">
