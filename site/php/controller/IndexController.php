@@ -20,8 +20,8 @@ class IndexController
 
     public function work(): string
     {
-        $posts = $this->postDAO->findAllInHierarchy();
-        $currentPost = $this->postDAO->findByPath($this->path);
+        $posts = $this->postDAO->findAllInHierarchyForNav();
+        $currentPost = $this->postDAO->findAccessibleByPath($this->path);
 
         if ($currentPost) {
             $view = (new View())

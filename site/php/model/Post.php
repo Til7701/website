@@ -9,13 +9,24 @@ class Post implements PostEntry
     private string $title;
     private string $template;
     private array $css;
+    private bool $showInNav;
+    private bool $allowAccess;
 
-    public function __construct(string $path, string $title, string $template, array $css)
+    public function __construct(
+        string $path,
+        string $title,
+        string $template,
+        array  $css = [],
+        bool   $showInNav = true,
+        bool   $allowAccess = true
+    )
     {
         $this->path = $path;
         $this->title = $title;
         $this->template = $template;
         $this->css = $css;
+        $this->showInNav = $showInNav;
+        $this->allowAccess = $allowAccess;
     }
 
     public function getPath(): string
@@ -36,6 +47,16 @@ class Post implements PostEntry
     public function getCss(): array
     {
         return $this->css;
+    }
+
+    public function isShowInNav(): bool
+    {
+        return $this->showInNav;
+    }
+
+    public function isAllowAccess(): bool
+    {
+        return $this->allowAccess;
     }
 
 }

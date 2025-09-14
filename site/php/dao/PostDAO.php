@@ -7,8 +7,8 @@ use model\PostEntry;
 interface PostDAO
 {
 
-    function findAllInHierarchy(): array;
+    function findAllInHierarchyForNav(): array;
 
-    function findByPath(string $path): ?PostEntry;
+    function findAccessibleByPath(string $path): ?PostEntry;
 
 }

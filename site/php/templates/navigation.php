@@ -1,38 +1,44 @@
-<nav>
-    <ul>
-        <?php
+<?php
 
-        use model\Post;
-        use model\PostGroup;
+use model\Post;
+use model\PostEntry;
+use model\PostGroup;
 
-        foreach ($post_hierarchy as $post): ?>
-            <?php if ($post instanceof Post): ?>
-                <li>
-                    <a href="<?php echo htmlspecialchars($post->getPath()); ?>"
-                       class="<?php echo $post === $current_post ? 'current' : ''; ?>">
-                        <?php echo htmlspecialchars($post->getTitle()); ?>
-                    </a>
-                </li>
-            <?php elseif ($post instanceof PostGroup): ?>
-                <li>
-                    <a href="<?php echo htmlspecialchars($post->getPath()); ?>"
-                       class="<?php echo $post === $current_post ? 'current' : ''; ?>">
-                        <?php echo htmlspecialchars($post->getTitle()); ?>
-                    </a>
-                    <ul>
-                        <?php foreach ($post->getPosts() as $subPost): ?>
-                            <?php if ($subPost instanceof Post): ?>
-                                <li>
-                                    <a href="<?php echo htmlspecialchars($subPost->getPath()); ?>"
-                                       class="<?php echo $subPost === $current_post ? 'current' : ''; ?>">
-                                        <?php echo htmlspecialchars($subPost->getTitle()); ?>
-                                    </a>
-                                </li>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    </ul>
-                </li>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    </ul>
-</nav>
+function renderNavItem(PostEntry $item, Post $current_post): void
+{
+    if ($item instanceof PostGroup) {
+        echo '<li>';
+        echo '<a href="' . htmlspecialchars($item->getPath()) . '"'
+            . ($item === $current_post ? ' class="current"' : '') . '>';
+        echo htmlspecialchars($item->getTitle());
+        echo '</a>';
+        echo '<ul>';
+        foreach ($item->getPosts() as $child) {
+            renderNavItem($child, $current_post);
+        }
+        echo '</ul>';
+        echo '</li>';
+    } elseif ($item instanceof Post) {
+        echo '<li>';
+        echo '<a href="' . htmlspecialchars($item->getPath()) . '"'
+            . ($item === $current_post ? ' class="current"' : '') . '>';
+        echo htmlspecialchars($item->getTitle());
+        echo '</a>';
+        echo '</li>';
+    }
+}
+
+function renderNavigation(array $post_hierarchy, PostEntry $current_post): void
+{
+    echo '<nav><ul>';
+    foreach ($post_hierarchy as $item) {
+        renderNavItem($item, $current_post);
+    }
+    echo '</ul></nav>';
+}
+
+if (isset($post_hierarchy, $current_post)) {
+    renderNavigation($post_hierarchy, $current_post);
+} else {
+    echo '<!-- Navigation data not available -->';
+}
