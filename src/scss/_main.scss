@@ -1,6 +1,7 @@
 main {
     grid-area: main;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: flex-start;
     padding: 2rem;
@@ -8,21 +9,36 @@ main {
     overflow: scroll;
     max-height: 100%;
 
-    .content-inner {
-        width: 75%;
+    article {
+        max-width: 75%;
     }
 
     .toc {
         width: 20%;
         margin-left: 2rem;
         position: sticky;
-        top: 1rem;
         align-self: flex-start;
         max-height: calc(100vh - 6rem);
         overflow-y: auto;
-        padding-right: 1rem;
         border: 1px solid #444;
+        border-radius: 0.25rem;
         background: #1e1e1e;
+        max-width: max-content;
+        min-width: max-content;
+
+        ul {
+            padding: 1rem;
+            margin: 0;
+            list-style-position: inside;
+
+            li {
+                margin: 0.5rem;
+            }
+
+            a {
+                margin: 0;
+            }
+        }
 
         a {
             display: block;
@@ -37,11 +53,11 @@ main {
     }
 
     @media (max-width: 768px) {
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 1rem;
         justify-content: start;
 
-        .content-inner {
+        .article {
             width: 100%;
         }
 
@@ -54,6 +70,8 @@ main {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+            align-self: center;
+            max-width: 100%;
         }
     }
 }
