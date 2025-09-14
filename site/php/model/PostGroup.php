@@ -2,7 +2,7 @@
 
 namespace model;
 
-class PostGroup extends Post implements PostEntry
+class PostGroup extends Post implements NavEntry
 {
 
     private array $posts;

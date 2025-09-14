@@ -1,5 +1,8 @@
 Options -Indexes
 
+Header set Connection keep-alive
+Header set Cache-Control "max-age=600, public"
+
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php [QSA,L]

@@ -2,7 +2,7 @@
 
 namespace model;
 
-class Post implements PostEntry
+class Post implements NavEntry
 {
 
     private string $path;

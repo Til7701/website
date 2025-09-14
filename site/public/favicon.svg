@@ -43,13 +43,6 @@
 
     <rect class="background" x="0" y="0" width="600" height="600"/>
 
-    <!--<line class="outline" x1="0" y1="0" x2="600" y2="0"/>
-    <line class="outline" x1="0" y1="0" x2="0" y2="600"/>
-    <line class="outline" x1="600" y1="0" x2="600" y2="600"/>
-    <line class="outline" x1="0" y1="600" x2="600" y2="600"/>-->
-
-    <!--<circle class="outline-circle" cx="300" cy="300" r="300" />-->
-
     <line class="maze1" x1="50" y1="200" x2="50" y2="300"/>
     <line class="maze1" x1="0" y1="50" x2="50" y2="50"/>
     <line class="maze1" x1="50" y1="200" x2="100" y2="200"/>

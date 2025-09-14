@@ -2,13 +2,13 @@
 
 namespace dao;
 
-use model\PostEntry;
+use model\NavEntry;
 
 interface PostDAO
 {
 
     function findAllInHierarchyForNav(): array;
 
-    function findAccessibleByPath(string $path): ?PostEntry;
+    function findAccessibleByPath(string $path): ?NavEntry;
 
 }

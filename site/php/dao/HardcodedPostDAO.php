@@ -2,9 +2,11 @@
 
 namespace dao;
 
+use model\ExternalLink;
+use model\NavEntry;
 use model\Post;
-use model\PostEntry;
 use model\PostGroup;
+use model\Separator;
 
 class HardcodedPostDAO implements PostDAO
 {
@@ -22,17 +24,19 @@ class HardcodedPostDAO implements PostDAO
     {
         $navPosts = [];
         foreach ($posts as $entry) {
-            if ($entry->isShowInNav()) {
-                if ($entry instanceof PostGroup) {
-                    $navPosts[] = new PostGroup(
-                        $entry->getPath(),
-                        $entry->getTitle(),
-                        $entry->getTemplate(),
-                        $this->createNavPosts($entry->getPosts()),
-                    );
-                } elseif ($entry instanceof Post && $entry->isShowInNav()) {
-                    $navPosts[] = $entry;
-                }
+            if ($entry instanceof Separator) {
+                $navPosts[] = $entry;
+            } elseif ($entry instanceof ExternalLink) {
+                $navPosts[] = $entry;
+            } elseif ($entry instanceof PostGroup && $entry->isShowInNav()) {
+                $navPosts[] = new PostGroup(
+                    $entry->getPath(),
+                    $entry->getTitle(),
+                    $entry->getTemplate(),
+                    $this->createNavPosts($entry->getPosts()),
+                );
+            } elseif ($entry instanceof Post && $entry->isShowInNav()) {
+                $navPosts[] = $entry;
             }
         }
         return $navPosts;
@@ -43,7 +47,7 @@ class HardcodedPostDAO implements PostDAO
         return $this->navPosts;
     }
 
-    public function findAccessibleByPath(string $path): ?PostEntry
+    public function findAccessibleByPath(string $path): ?NavEntry
     {
         foreach ($this->posts as $entry) {
             $result = $this->findByPathInEntry($entry, $path);
@@ -54,7 +58,7 @@ class HardcodedPostDAO implements PostDAO
         return null;
     }
 
-    private function findByPathInEntry(PostEntry $entry, string $path): ?PostEntry
+    private function findByPathInEntry(NavEntry $entry, string $path): ?NavEntry
     {
         if ($entry instanceof PostGroup) {
             if ($entry->getPath() === $path && $entry->isAllowAccess()) {
@@ -133,6 +137,12 @@ class HardcodedPostDAO implements PostDAO
                 "Long Post",
                 "from-markdown/long.html",
             ),
+            new Separator(),
+            new ExternalLink(
+                "https://github.com/Til7701",
+                "GitHub"
+            ),
+            new Separator(),
             new Post("/impressum",
                 "Impressum",
                 "footer/impressum.php",

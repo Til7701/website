@@ -2,7 +2,7 @@
 
 namespace model;
 
-interface PostEntry
+interface NavEntry
 {
 
 }
