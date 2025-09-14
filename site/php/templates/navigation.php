@@ -4,7 +4,7 @@ use model\Post;
 use model\PostEntry;
 use model\PostGroup;
 
-function renderNavItem(PostEntry $item, Post $current_post): void
+function renderNavItem(PostEntry $item, Post|null $current_post): void
 {
     if ($item instanceof PostGroup) {
         echo '<li>';
@@ -28,7 +28,7 @@ function renderNavItem(PostEntry $item, Post $current_post): void
     }
 }
 
-function renderNavigation(array $post_hierarchy, PostEntry $current_post): void
+function renderNavigation(array $post_hierarchy, PostEntry|null $current_post): void
 {
     echo '<nav><ul>';
     foreach ($post_hierarchy as $item) {
@@ -37,7 +37,7 @@ function renderNavigation(array $post_hierarchy, PostEntry $current_post): void
     echo '</ul></nav>';
 }
 
-if (isset($post_hierarchy, $current_post)) {
+if (isset($post_hierarchy) && (isset($current_post) || $current_post === null)) {
     renderNavigation($post_hierarchy, $current_post);
 } else {
     echo '<!-- Navigation data not available -->';

@@ -133,17 +133,15 @@ class HardcodedPostDAO implements PostDAO
                 "Long Post",
                 "from-markdown/long.html",
             ),
-            new Post("/imprint",
-                "Imprint",
-                "footer/imprint.php",
+            new Post("/impressum",
+                "Impressum",
+                "footer/impressum.php",
+                showInNav: false,
+                allowAccess: false
             ),
             new Post("/privacy-policy",
                 "Privacy Policy",
                 "footer/privacy.php",
-            ),
-            new Post("/terms-of-service",
-                "Terms of Service",
-                "footer/terms.php",
             ),
         ];
     }

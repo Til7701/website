@@ -6,7 +6,6 @@ nav {
     border-right: 1px solid #444;
     overflow-y: auto;
     max-width: 30vw;
-    width: max-content;
 
     ul {
         list-style: none;
@@ -33,7 +32,7 @@ nav {
     a {
         display: block;
         padding: 0.4rem 0.8rem;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         color: #03a8f9;
         transition: background 0.2s, color 0.2s;
         text-decoration: none;
