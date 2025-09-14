@@ -9,18 +9,20 @@ main {
     max-height: 100%;
 
     .content-inner {
-        width: 50%;
+        width: 75%;
     }
 
     .toc {
-        width: 20vw;
+        width: 20%;
         margin-left: 2rem;
         position: sticky;
-        top: 6rem;
+        top: 1rem;
         align-self: flex-start;
         max-height: calc(100vh - 6rem);
         overflow-y: auto;
         padding-right: 1rem;
+        border: 1px solid #444;
+        background: #1e1e1e;
 
         a {
             display: block;
