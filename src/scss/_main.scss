@@ -56,22 +56,21 @@ main {
         flex-direction: column;
         padding: 1rem;
         justify-content: start;
+        max-width: calc(100vw - 2rem);
 
         .article {
             width: 100%;
         }
 
         .toc {
-            width: 100%;
+            max-width: calc(100% - 2rem);
             margin: 1rem 0 0 0;
-            position: static;
             max-height: none;
             padding-right: 0;
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             align-self: center;
-            max-width: 100%;
         }
     }
 }

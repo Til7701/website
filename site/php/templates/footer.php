@@ -4,8 +4,8 @@
     <div class="cookie-banner">
         <p>This website does not use any Cookies.</p>
         <div>
-            <label for="accept-checkbox" class="accept-button">Accept</label>
-            <label for="decline-checkbox" class="decline-button">Decline</label>
+            <label for="accept-checkbox" class="accept-button button">Accept</label>
+            <label for="decline-checkbox" class="decline-button button">Decline</label>
         </div>
     </div>
 
