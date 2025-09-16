@@ -1,28 +1,28 @@
 services:
-  php-apache:
-    image: php:8.3-apache
+  php:
+    build:
+      context: ./docker/php
     ports:
       - "8080:80"
     volumes:
       - ./site:/var/www/html
-    command: >
-      bash -c "a2enmod rewrite headers && apache2-foreground"
 
   scss:
-    image: node:lts
+    build:
+      context: ./docker/scss
     working_dir: /app
     volumes:
       - ./:/app
     entrypoint: >
-      sh -c "npm install -g sass && sass --watch src/scss:site/css --style compressed"
+      sh -c "sass --watch src/scss:site/css --style compressed"
 
   watcher:
-    image: pandoc/core:3.7-alpine
+    build:
+      context: ./docker/watcher
     working_dir: /app
     volumes:
       - ./:/app
     entrypoint: >
-      sh -c "apk add inotify-tools &&
-             while inotifywait -r -e modify,create,delete /app/src/markdown /app/src/html; do
+      sh -c "while inotifywait -r -e modify,create,delete /app/src/markdown /app/src/html; do
                sh scripts/convert.sh;
              done"
