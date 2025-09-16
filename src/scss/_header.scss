@@ -31,9 +31,9 @@ header {
         height: 100%;
         margin-left: auto;
         margin-right: 0;
-        mask-image: linear-gradient(to right, transparent, black 90%);
+        mask-image: linear-gradient(to right, transparent, black 50%);
         mask-size: 100vw 100%;
-        -webkit-mask-image: linear-gradient(to right, transparent, black 90%);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 50%);
         object-fit: contain;
         display: block;
     }

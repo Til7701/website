@@ -29,7 +29,7 @@ main {
         ul {
             padding: 1rem;
             margin: 0;
-            list-style-position: inside;
+            list-style: none;
 
             li {
                 margin: 0.5rem;
@@ -56,21 +56,17 @@ main {
         flex-direction: column;
         padding: 1rem;
         justify-content: start;
-        max-width: calc(100vw - 2rem);
 
-        .article {
-            width: 100%;
+        article {
+            max-width: 100%;
         }
 
         .toc {
-            max-width: calc(100% - 2rem);
-            margin: 1rem 0 0 0;
+            max-width: calc(100%);
             max-height: none;
-            padding-right: 0;
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            align-self: center;
         }
     }
 }
