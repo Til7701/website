@@ -11,6 +11,7 @@ if [ ! -f "$TEMPLATE_FILE" ]; then
     exit 1
 fi
 
+rm -rf "$TARGET_DIR"
 mkdir -p "$TARGET_DIR"
 
 find "$SRC_DIR" -type f -name "*.md" | while read -r md_file; do

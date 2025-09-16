@@ -1,5 +1,7 @@
 Options -Indexes
 
+RedirectMatch 403 (.*)php/(.*)
+
 Header set Connection keep-alive
 Header set Cache-Control "max-age=600, public"
 

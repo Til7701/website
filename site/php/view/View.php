@@ -68,13 +68,13 @@ class View
 
         <body>
         <?php
-        include "../php/templates/header.php";
+        include "php/templates/header.php";
 
         foreach ($templates as $template) {
-            include "../php/templates/" . $template;
+            include "php/templates/" . $template;
         }
 
-        include "../php/templates/footer.php";
+        include "php/templates/footer.php";
         ?>
         </body>
 

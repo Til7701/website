@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . "/../php/config/setup.php";
+include_once __DIR__ . "/php/config/setup.php";
 
 use controller\IndexController;
 
