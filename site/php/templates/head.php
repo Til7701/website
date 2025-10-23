@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.svg" type="image/x-icon"/>
     <!-- common styles: -->
+    <link rel="stylesheet" type="text/css" href="/accent-color.php">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <!-- page-specific styles: -->
     <?php foreach ($cssFiles as $cssFile) { ?>
