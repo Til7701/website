@@ -11,6 +11,7 @@ class Post implements NavEntry
     private array $css;
     private bool $showInNav;
     private bool $allowAccess;
+    private bool $showToC;
 
     public function __construct(
         string $path,
@@ -18,7 +19,8 @@ class Post implements NavEntry
         string $template,
         array  $css = [],
         bool   $showInNav = true,
-        bool   $allowAccess = true
+        bool   $allowAccess = true,
+        bool   $showToC = true,
     )
     {
         $this->path = $path;
@@ -27,6 +29,7 @@ class Post implements NavEntry
         $this->css = $css;
         $this->showInNav = $showInNav;
         $this->allowAccess = $allowAccess;
+        $this->showToC = $showToC;
     }
 
     public function getPath(): string
@@ -57,6 +60,11 @@ class Post implements NavEntry
     public function isAllowAccess(): bool
     {
         return $this->allowAccess;
+    }
+
+    public function isShowToC(): bool
+    {
+        return $this->showToC;
     }
 
 }

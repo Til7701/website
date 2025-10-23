@@ -84,6 +84,7 @@ class HardcodedPostDAO implements PostDAO
             new Post("/",
                 "Home",
                 "from-markdown/home.html",
+                showToC: false,
             ),
             new PostGroup("/projects",
                 "Projects",
@@ -151,7 +152,7 @@ class HardcodedPostDAO implements PostDAO
             ),
             new Post("/privacy-policy",
                 "Privacy Policy",
-                "footer/privacy.php",
+                "from-markdown/privacy-policy.html",
             ),
         ];
     }

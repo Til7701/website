@@ -4,6 +4,7 @@ namespace controller;
 
 use dao\PostDAO;
 use dao\PostDAOFactory;
+use model\Post;
 use view\View;
 
 class IndexController
@@ -23,13 +24,17 @@ class IndexController
         $posts = $this->postDAO->findAllInHierarchyForNav();
         $currentPost = $this->postDAO->findAccessibleByPath($this->path);
 
-        if ($currentPost) {
+        if ($currentPost instanceof Post) {
+            $css = $currentPost->getCss();
+            if (!$currentPost->isShowToC()) {
+                $css[] = "hidden-toc";
+            }
             $view = (new View())
                 ->setPostHierarchy($posts)
                 ->setCurrentPost($currentPost)
                 ->setTemplates(array("navigation.php", $currentPost->getTemplate()))
                 ->setTitle($currentPost->getTitle())
-                ->setCss($currentPost->getCss());
+                ->setCss($css);
         } else {
             http_response_code(404);
             $view = (new View())
