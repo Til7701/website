@@ -19,7 +19,7 @@ You can find more information about Alfahosting's practices in their [privacy
 policy](https://www.alfahosting.de/datenschutzerklaerung)
 and [FAQ](https://hilfe.alfahosting.de/hc/de/articles/20041611846033-Datenschutz-DSGVO).
 
-The collected data is usually sent to the webserver by your browser automatically.
+The collected data is usually automatically sent by your browser.
 
 ### How will I use your data?
 
