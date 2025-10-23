@@ -16,7 +16,7 @@ class AccentColorController
             "#2BC17B",
             "#E2A000",
             "#E56210",
-            "#A05EBB"
+            "#A05EBB",
         ];
     }
 

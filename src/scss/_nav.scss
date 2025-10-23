@@ -1,9 +1,9 @@
 nav {
     grid-area: nav;
-    background-color: #1e1e1e;
+    background-color: var(--header-background-color);
     padding: 2rem;
     box-sizing: border-box;
-    border-right: 1px solid #444;
+    border-right: 1px solid var(--border-color);
     overflow-y: auto;
     max-width: 30vw;
 
@@ -18,21 +18,21 @@ nav {
     a:hover,
     a:focus {
         background: var(--accent-color);
-        color: #ffffff;
+        color: var(--text-color);
     }
 
     a:hover[href^="http"]::after {
-        background-color: #ffffff;
+        background-color: var(--text-color)
     }
 
     .current {
         font-weight: bold;
-        color: #ffffff;
+        color: var(--text-color);
         background: var(--accent-color);
     }
 
     .separator {
-        border-bottom: 1px solid #444;
+        border-bottom: 1px solid var(--border-color);
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         pointer-events: none;
