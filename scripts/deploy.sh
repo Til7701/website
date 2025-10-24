@@ -13,7 +13,10 @@ set ftp:passive-mode yes
 LOCAL_DIR="site"
 
 echo "Uploading..."
+
 lftp -u "$FTP_USER","$FTP_SECRET" "$FTP_HOST" <<EOF
 mirror --reverse --verbose --delete --parallel=2 "$LOCAL_DIR" /
 quit
 EOF
+
+echo "Upload complete."
