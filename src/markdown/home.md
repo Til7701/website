@@ -2,9 +2,9 @@ This website is a platform for me to share my projects, thoughts, and experience
 It is very new and I currently do not have much content here, but I plan to add more in the future.
 
 You can find a collection of my projects in my [GitHub](https://github.com/Til7701) profile.
-<!--Some of the projects are also listed on the [Projects](/projects) page.
-The projects page gives a brief overview of each project, along with links to the source code and any relevant
-documentation.-->
+Some of the projects are also listed on the [Projects](/projects) page.
+It gives a brief overview of each project, along with links to the source code and any relevant
+documentation.
 
 ## About me
 

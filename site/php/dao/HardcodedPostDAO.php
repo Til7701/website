@@ -93,6 +93,7 @@ class HardcodedPostDAO implements PostDAO
                     new Post("/projects/website",
                         "This Website",
                         "from-markdown/projects/website.html",
+                        showInNav: false
                     ),
                     new Post("/projects/request-sink",
                         "request-sink",
@@ -124,7 +125,6 @@ class HardcodedPostDAO implements PostDAO
                         showInNav: false
                     ),
                 ],
-                showInNav: false
             ),
             new PostGroup("/guides",
                 "Guides",
