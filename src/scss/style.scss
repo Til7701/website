@@ -5,12 +5,14 @@
 
 :root {
     --background-color: #121212;
-    --header-background-color: #1e1e1e;
+    --header-background-color: #222222;
     --border-color: #444;
     --text-color: #DDDDDD;
     --footer-text-color: #888888;
 
     --header-height: 4rem;
+
+    height: 100%;
 }
 
 body {
@@ -25,8 +27,8 @@ body {
       "footer main";
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    max-height: 100vh;
+    min-height: 100%;
+    max-height: 100%;
     overflow-y: hidden;
 }
 
