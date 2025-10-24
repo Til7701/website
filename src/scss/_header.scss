@@ -19,12 +19,13 @@ header {
     .nav-button {
         display: none;
         font-size: 2rem;
+        margin-right: 1rem;
+        z-index: 2;
 
         @media (max-width: 768px) {
             display: inline-block;
             color: white;
             padding-bottom: 0.8rem;
-            background-color: var(--header-background-color);
         }
     }
 
@@ -39,10 +40,15 @@ header {
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 0;
 
         @media (max-width: 768px) {
             mask-image: linear-gradient(to right, transparent, black 95%);
             -webkit-mask-image: linear-gradient(to right, transparent, black 95%);
         }
+    }
+
+    @media (max-width: 768px) {
+        padding-left: 1rem;
     }
 }
