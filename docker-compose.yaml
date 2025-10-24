@@ -14,7 +14,7 @@ services:
     volumes:
       - ./:/app
     entrypoint: >
-      sh -c "sass --watch src/scss:site/css --style compressed"
+      sh -c "sass --watch --no-source-map src/scss:site/css --style compressed"
 
   watcher:
     build:
