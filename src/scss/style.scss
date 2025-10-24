@@ -26,24 +26,8 @@ body {
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 60;
-}
-
-nav {
-    position: sticky;
-    top: 4rem;
-    z-index: 50;
-}
-
-footer {
-    position: sticky;
-    bottom: 0;
-    z-index: 60;
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
 @media (max-width: 768px) {
@@ -55,6 +39,7 @@ footer {
       "footer";
         grid-template-columns: 1fr;
         grid-template-rows: min-content min-content auto min-content;
+        overflow-y: scroll;
     }
 
     #nav-toggle:checked ~ nav {

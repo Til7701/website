@@ -5,7 +5,7 @@ main {
     align-items: flex-start;
     justify-content: space-between;
     box-sizing: border-box;
-    overflow: visible;
+    overflow: scroll;
 
     article {
         order: 1;
@@ -32,16 +32,17 @@ main {
         }
     }
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-        justify-content: start;
-
+    @media (max-width: 1024px) {
         article {
             max-width: 100%;
         }
-
         .toc {
             display: none;
         }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: start;
     }
 }
