@@ -94,27 +94,3 @@ a[href^="http"]::after {
     -webkit-mask: url('/assets/font-awesome/arrow-up-right-from-square.svg') no-repeat center / 100%;
     mask: url('/assets/font-awesome/arrow-up-right-from-square.svg') no-repeat center / 100%;
 }
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    ul {
-        margin-left: 1rem;
-        margin-top: 0.25rem;
-        margin-bottom: 0.25rem;
-        border-left: 2px solid var(--border-color);
-        padding-left: 0.5rem;
-    }
-
-    li {
-        margin-top: 0.25rem;
-        margin-bottom: 0.25rem;
-        position: relative;
-    }
-
-    li:last-child {
-        margin-bottom: 0;
-    }
-}

@@ -2,6 +2,9 @@ This website is a platform for me to share my projects, thoughts, and experience
 It is very new and I currently do not have much content here, but I plan to add more in the future.
 
 You can find a collection of my projects in my [GitHub](https://github.com/Til7701) profile.
+<!--Some of the projects are also listed on the [Projects](/projects) page.
+The projects page gives a brief overview of each project, along with links to the source code and any relevant
+documentation.-->
 
 ## About me
 
@@ -12,4 +15,4 @@ Since then, I have worked on various projects, both personal and academic, and h
 programming languages and frameworks.
 I used C# a bit more in school, but left it behind when I started my studies.
 Most of my projects are now using Java and the Spring Boot framework, if applicable, but I also tried out other
-languages like Rust, Python, and JavaScript.
+languages like Rust, PHP, Python, and JavaScript.

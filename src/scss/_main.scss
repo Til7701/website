@@ -3,7 +3,6 @@ main {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
     box-sizing: border-box;
     overflow: scroll;
 
@@ -11,7 +10,7 @@ main {
         order: 1;
         display: block;
         margin: 2rem;
-        max-width: 75%;
+        width: 75%;
 
         img {
             max-width: 100%;
@@ -26,6 +25,30 @@ main {
         position: sticky;
         align-self: flex-start;
         padding: 1rem;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            ul {
+                margin-left: 0.25rem;
+                margin-top: 0.25rem;
+                margin-bottom: 0.25rem;
+                border-left: 2px solid var(--border-color);
+                padding-left: 0.5rem;
+            }
+
+            li {
+                margin-top: 0.25rem;
+                margin-bottom: 0.25rem;
+                position: relative;
+            }
+
+            li:last-child {
+                margin-bottom: 0;
+            }
+        }
 
         a {
             color: var(--accent-color);
