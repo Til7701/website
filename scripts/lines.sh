@@ -2,8 +2,8 @@
 
 set -e
 
-width=160
-height=16
+width=26
+height=12
 factor=50
 
 for (( i = 0; i < width; i++ )); do

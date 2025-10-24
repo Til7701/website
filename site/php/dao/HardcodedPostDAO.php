@@ -134,10 +134,6 @@ class HardcodedPostDAO implements PostDAO
                 ],
                 showInNav: false
             ),
-            new Post("/long",
-                "Long Post",
-                "from-markdown/long.html",
-            ),
             new Separator(),
             new ExternalLink(
                 "https://github.com/Til7701",

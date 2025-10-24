@@ -2,6 +2,7 @@
 
 namespace controller;
 
+use Random\RandomException;
 use view\AccentColor;
 
 class AccentColorController
@@ -17,7 +18,11 @@ class AccentColorController
 
     private function getRandomHue(): string
     {
-        return rand(0, 180);
+        try {
+            return random_int(0, 180);
+        } catch (RandomException) {
+            return rand(0, 180);
+        }
     }
 
 }

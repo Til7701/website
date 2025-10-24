@@ -39,8 +39,9 @@ class IndexController
             http_response_code(404);
             $view = (new View())
                 ->setPostHierarchy($posts)
-                ->setTemplates(array("navigation.php", "error/postNotFound.php"))
-                ->setTitle("Page not found");
+                ->setTemplates(array("navigation.php", "error/pageNotFound.php"))
+                ->setTitle("Page not found")
+                ->setCss(array("hidden-toc"));
         }
         return $view->render();
     }
