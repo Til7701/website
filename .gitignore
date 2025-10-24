@@ -3,3 +3,5 @@
 
 site/php/templates/from-markdown
 site/css
+
+scripts/.env
