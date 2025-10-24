@@ -19,7 +19,7 @@ function renderNavItem(NavEntry $item, Post|null $current_post): void
     } elseif ($item instanceof PostGroup) {
         echo '<li>';
         echo '<a href="' . htmlspecialchars($item->getPath()) . '"'
-            . ($item === $current_post ? ' class="current"' : '') . '>';
+            . ($item->getPath() === $current_post->getPath() ? ' class="current"' : '') . '>';
         echo htmlspecialchars($item->getTitle());
         echo '</a>';
         echo '<ul>';
@@ -31,7 +31,7 @@ function renderNavItem(NavEntry $item, Post|null $current_post): void
     } elseif ($item instanceof Post) {
         echo '<li>';
         echo '<a href="' . htmlspecialchars($item->getPath()) . '"'
-            . ($item === $current_post ? ' class="current"' : '') . '>';
+            . ($item->getPath() === $current_post->getPath() ? ' class="current"' : '') . '>';
         echo htmlspecialchars($item->getTitle());
         echo '</a>';
         echo '</li>';
