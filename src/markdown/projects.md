@@ -17,6 +17,8 @@ The content is mostly written in Markdown and converted to HTML using [Pandoc](h
 
 ## Schlunzis
 
+### PPA
+
 ### Vigilia
 
 ### Ze Impressive Schwifty
