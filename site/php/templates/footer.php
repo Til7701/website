@@ -9,5 +9,5 @@
         </div>
     </div>
 
-    <p>&copy; 2025 Til7701, all rights reserved</p>
+    <p>&copy;2025 Tilman Holube, all rights reserved</p>
 </footer>

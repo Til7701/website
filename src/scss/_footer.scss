@@ -10,11 +10,16 @@ footer {
     font-size: 0.75rem;
     color: var(--footer-text-color);
     max-width: 100vw;
+    text-align: center;
 
     input {
         display: none;
         margin: 0;
         padding: 0;
+    }
+
+    p {
+        margin: 0.5rem;
     }
 
     #accept-checkbox:checked ~ .cookie-banner,
@@ -25,7 +30,6 @@ footer {
     .cookie-banner {
         border-bottom: 1px solid var(--border-color);
         padding: 0.5rem 0.5rem 0.75rem;
-        text-align: center;
 
         p {
             margin-bottom: 0.5rem;
