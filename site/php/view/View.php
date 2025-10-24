@@ -76,6 +76,7 @@ class View
 
         include "php/templates/footer.php";
         ?>
+        <script>0</script>
         </body>
 
         </html>
