@@ -5,16 +5,16 @@ namespace view;
 class AccentColor
 {
 
-    private string $accentColor;
+    private string $hue;
 
-    public function __construct(string $accentColor)
+    public function __construct(string $hue)
     {
-        $this->accentColor = $accentColor;
+        $this->hue = $hue;
     }
 
     public function render(): false|string
     {
-        return ":root{--accent-color: " . $this->accentColor . ";}";
+        return ":root{--accent-color: " . "hsl(" . $this->hue . ", 75%, 50%);}";
     }
 
 }

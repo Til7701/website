@@ -7,30 +7,17 @@ use view\AccentColor;
 class AccentColorController
 {
 
-    private array $colors;
-
-    public function __construct()
-    {
-        $this->colors = [
-            "#03a8f9",
-            "#2BC17B",
-            "#E2A000",
-            "#E56210",
-            "#A05EBB",
-        ];
-    }
-
     public function work(): string
     {
-        $accentColor = $this->getFromArray();
+        $hue = $this->getRandomHue();
 
-        $view = new AccentColor($accentColor);
+        $view = new AccentColor($hue);
         return $view->render();
     }
 
-    private function getFromArray(): string
+    private function getRandomHue(): string
     {
-        return $this->colors[array_rand($this->colors)];
+        return rand(0, 180);
     }
 
 }
