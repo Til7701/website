@@ -26,10 +26,11 @@ header {
         font-size: 2rem;
         margin-right: 1rem;
         z-index: 2;
+        color: white;
 
         @media (max-width: 768px) {
-            display: inline-block;
-            color: white;
+            display: flex;
+            align-items: center;
         }
     }
 
@@ -47,8 +48,8 @@ header {
         z-index: 0;
 
         @media (max-width: 768px) {
-            mask-image: linear-gradient(to right, transparent, black 95%);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 95%);
+            mask-image: linear-gradient(to right, transparent, black 99%);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 99%);
         }
     }
 
