@@ -121,6 +121,7 @@ class HardcodedPostDAO implements PostDAO
                         ],
                     ),
                 ],
+                showInNav: false
             ),
             new PostGroup("/guides",
                 "Guides",
