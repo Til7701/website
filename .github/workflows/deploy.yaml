@@ -1,0 +1,26 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Build HTML Templates
+        run: scripts/convert.sh
+
+      - name: Build CSS
+        run: scripts/build-css.sh
+
+      - name: Deploy to Server
+        run: scripts/deploy.sh
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_SECRET: ${{ secrets.FTP_SECRET }}
