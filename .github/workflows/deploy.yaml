@@ -9,6 +9,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
+
       - name: Checkout repository
         uses: actions/checkout@v5
 
