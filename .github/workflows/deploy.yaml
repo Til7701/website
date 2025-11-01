@@ -24,6 +24,6 @@ jobs:
       - name: Deploy to Server
         run: |
           lftp -u "${{ secrets.FTP_USER }}","${{ secrets.FTP_SECRET }}" "${{ secrets.FTP_HOST }}" <<EOF
-          mirror --reverse --verbose --delete --parallel=2 "$LOCAL_DIR" /
+          mirror --reverse --verbose --delete --parallel=2 site /
           quit
           EOF
