@@ -9,8 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Pandoc
-        run: sudo apt-get install -y pandoc
+      - name: Install Dependencies
+        run: sudo apt-get install -y pandoc lftp
 
       - name: Checkout repository
         uses: actions/checkout@v5
@@ -22,8 +22,8 @@ jobs:
         run: scripts/build-css.sh
 
       - name: Deploy to Server
-        run: scripts/deploy.sh
-        env:
-          FTP_HOST: ${{ secrets.FTP_HOST }}
-          FTP_USER: ${{ secrets.FTP_USER }}
-          FTP_SECRET: ${{ secrets.FTP_SECRET }}
+        run: |
+          lftp -u "${{ secrets.FTP_USER }}","${{ secrets.FTP_SECRET }}" "${{ secrets.FTP_HOST }}" <<EOF
+          mirror --reverse --verbose --delete --parallel=2 "$LOCAL_DIR" /
+          quit
+          EOF
