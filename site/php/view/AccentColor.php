@@ -14,7 +14,7 @@ class AccentColor
 
     public function render(): false|string
     {
-        return ":root{--accent-color: " . "hsl(" . $this->hue . ", 75%, 50%);}";
+        return ":root{--accent-color: " . "hsl(" . $this->hue . ", 75%, 50%);}@media(prefers-color-scheme: light){:root{--accent-color: " . "hsl(" . $this->hue . ", 75%, 25%);}}";
     }
 
 }

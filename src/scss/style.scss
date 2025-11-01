@@ -7,12 +7,20 @@
     --background-color: #121212;
     --header-background-color: #222222;
     --border-color: #444;
-    --text-color: #DDDDDD;
+    --text-color: #EEEEEE;
     --footer-text-color: #999999;
 
     --header-height: 4rem;
 
     height: 100%;
+
+    @media (prefers-color-scheme: light) {
+        --background-color: #EEEEEE;
+        --header-background-color: #E9E9E9;
+        --border-color: #AAA;
+        --text-color: #222222;
+        --footer-text-color: #555555;
+    }
 }
 
 body {
