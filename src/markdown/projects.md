@@ -35,7 +35,7 @@ Unfortunately, I have not really worked on it in a while, since I am not using W
 
 [GitHub](https://github.com/schlunzis)
 
-Schlunzis is a GitHub organization I co-founded with [JayPi4c](https://jaypi4c.github.io/JayPi4c/).
+Schlunzis is a GitHub organization I co-founded with [JayPi4c](https://blog.jaypi4c.de/).
 We are working on and off on various projects together.
 You can interpret the name as the German word or as an acronym for "**S**harp-minded **C**oders **H**andcrafting
 **L**imitless **U**tilities **N**amed **Z**e **I**mpressive **S**chwifty"
