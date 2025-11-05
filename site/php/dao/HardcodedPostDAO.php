@@ -138,6 +138,10 @@ class HardcodedPostDAO implements PostDAO
                 ],
                 showInNav: false
             ),
+            new Post("/external-references",
+                "External References",
+                "from-markdown/external-references.html",
+            ),
             new Separator(),
             new ExternalLink(
                 "https://github.com/Til7701",
