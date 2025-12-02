@@ -6,5 +6,6 @@ Header set Connection keep-alive
 Header set Cache-Control "max-age=600, private"
 
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !^/api(/|$) [NC]
 RewriteRule ^(.*)$ index.php [QSA,L]
