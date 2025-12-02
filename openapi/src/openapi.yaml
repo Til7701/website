@@ -1,0 +1,16 @@
+openapi: 3.0.3
+info:
+  title: Til7701 API
+  version: 1.0.0
+
+servers:
+  - url: https://til7701.de/api/v1
+
+paths:
+  /self-info:
+    $ref: './paths/self-info.yaml'
+
+components:
+  schemas:
+    selfInfo:
+      $ref: './components/schemas/selfInfo.yaml'

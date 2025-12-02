@@ -15,6 +15,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      - name: Validate OpenAPI Docs
+        run: |
+          cd openapi
+          ./validate.sh
+
+      - name: Build OpenAPI Docs
+        run: |
+          cd openapi
+          ./bundle.sh
+
       - name: Build HTML Templates
         run: scripts/convert.sh
 

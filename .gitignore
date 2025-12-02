@@ -1,7 +1,10 @@
 .idea
 *.iml
 
+site/api/v1/openapi.yaml
+site/api/v1/openapi.json
 site/php/templates/from-markdown
 site/css
 
 scripts/.env
+target/
