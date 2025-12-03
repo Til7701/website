@@ -141,6 +141,8 @@ class HardcodedPostDAO implements PostDAO
             new Post("/external-references",
                 "External References",
                 "from-markdown/external-references.html",
+                css: ["tables", "code-blocks"],
+                js: ["code-block-copy"]
             ),
             new Separator(),
             new Post("/api-docs",

@@ -102,3 +102,9 @@ a[href^="http"]::after {
     -webkit-mask: url('/assets/font-awesome/arrow-up-right-from-square.svg') no-repeat center / 100%;
     mask: url('/assets/font-awesome/arrow-up-right-from-square.svg') no-repeat center / 100%;
 }
+
+details {
+    summary {
+        cursor: pointer;
+    }
+}

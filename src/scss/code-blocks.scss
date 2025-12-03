@@ -1,0 +1,64 @@
+:root {
+    --code-background-color: var(--header-background-color);
+    --code-text-color: var(--text-color);
+
+    --code-block-kw-color: var(--accent-color);
+
+    @media (prefers-color-scheme: light) {
+        /* TODO */
+    }
+}
+
+code {
+    hyphens: manual;
+    white-space: pre-wrap;
+    background-color: var(--code-background-color);
+    color: var(--code-text-color);
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    padding: 0.05rem;
+}
+
+div.sourceCode {
+    position: relative;
+    background-color: var(--code-background-color);
+    color: var(--code-text-color);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    overflow-x: auto;
+    font-size: 0.9rem;
+
+    code {
+        padding: 0;
+    }
+
+    pre {
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+    }
+
+    .kw {
+        color: var(--code-block-kw-color);
+    }
+
+    .copy-btn {
+        position: absolute;
+        top: 0.3em;
+        right: 0.3em;
+        padding: 0.2em 0.5em;
+        font-size: 0.8em;
+        cursor: pointer;
+        background: var(--code-background-color);
+        border: 1px solid var(--border-color);
+        border-radius: 0.25rem;
+        color: var(--code-text-color);
+
+        opacity: 0;
+        transition: opacity 0.2s;
+    }
+}
+
+.sourceCode:hover .copy-btn {
+    opacity: 1;
+}

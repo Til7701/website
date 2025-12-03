@@ -9,6 +9,7 @@ class Post implements NavEntry
     private string $title;
     private string $template;
     private array $css;
+    private array $js;
     private bool $showInNav;
     private bool $allowAccess;
     private bool $showToC;
@@ -18,6 +19,7 @@ class Post implements NavEntry
         string $title,
         string $template,
         array  $css = [],
+        array  $js = [],
         bool   $showInNav = true,
         bool   $allowAccess = true,
         bool   $showToC = true,
@@ -27,6 +29,7 @@ class Post implements NavEntry
         $this->title = $title;
         $this->template = $template;
         $this->css = $css;
+        $this->js = $js;
         $this->showInNav = $showInNav;
         $this->allowAccess = $allowAccess;
         $this->showToC = $showToC;
@@ -50,6 +53,11 @@ class Post implements NavEntry
     public function getCss(): array
     {
         return $this->css;
+    }
+
+    public function getJs(): array
+    {
+        return $this->js;
     }
 
     public function isShowInNav(): bool

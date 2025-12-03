@@ -24,7 +24,13 @@ find "$SRC_DIR" -type f -name "*.md" | while read -r md_file; do
 
     echo "Converting $md_file to $html_file using $TEMPLATE_FILE..."
 
-    pandoc "$md_file" --template="$TEMPLATE_FILE" -s --table-of-contents -o "$html_file"
+    pandoc "$md_file" \
+      --template="$TEMPLATE_FILE" \
+      -s \
+      --table-of-contents \
+      --toc-depth=4 \
+      --strip-comments=true \
+      -o "$html_file"
 done
 
 echo "All Markdown files have been converted to HTML in $TARGET_DIR using the custom template."

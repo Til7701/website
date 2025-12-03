@@ -1,0 +1,37 @@
+:root {
+    --table-header-background-color: var(--header-background-color);
+    --table-row-odd-background-color: #121212;
+    --table-row-even-background-color: #101010;
+    --table-border-color: var(--border-color);
+
+    @media (prefers-color-scheme: light) {
+        --table-row-odd-background-color: #E2E2E2;
+        --table-row-even-background-color: #D8D8D8;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+
+    th,
+    td {
+        padding: 0.75rem;
+        text-align: left;
+        border: 1px solid var(--table-border-color);
+    }
+
+    th {
+        background-color: var(--table-header-background-color);
+        font-weight: bold;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: var(--table-row-odd-background-color);
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: var(--table-row-even-background-color);
+    }
+}

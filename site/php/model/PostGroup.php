@@ -13,6 +13,7 @@ class PostGroup extends Post implements NavEntry
         string $template,
         array  $posts,
         array  $css = [],
+        array  $js = [],
         bool   $showInNav = true,
         bool   $allowAccess = true
     )
@@ -22,6 +23,7 @@ class PostGroup extends Post implements NavEntry
             $title,
             $template,
             $css,
+            $js,
             $showInNav,
             $allowAccess
         );
