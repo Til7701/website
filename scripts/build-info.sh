@@ -3,9 +3,10 @@
 set -e
 
 COMMIT_HASH=$(git rev-parse --short HEAD)
-GIT_TREE_STATE=$(git rev-parse --is-tree-clean)
-if [ "${GIT_TREE_STATE}" != "true" ]; then
-  GIT_TREE_STATE="dirty"
+if [[ $(git diff --stat) != '' ]]; then
+  GIT_TREE_STATE=dirty
+else
+  GIT_TREE_STATE=clean
 fi
 BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
