@@ -31,6 +31,9 @@ jobs:
       - name: Build CSS
         run: scripts/build-css.sh
 
+      - name: Create Build Info
+        run: scripts/build-info.sh
+
       - name: Deploy to Server
         run: |
           lftp -u "${{ secrets.FTP_USER }}","${{ secrets.FTP_SECRET }}" "${{ secrets.FTP_HOST }}" <<EOF

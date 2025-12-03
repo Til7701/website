@@ -9,5 +9,18 @@
         </div>
     </div>
 
-    <p>&copy;2025 Tilman Holube, all rights reserved</p>
+    <p><?php
+        $commitHash = trim(file_get_contents("php/build-info/commit_hash.txt"));
+        $gitTreeState = trim(file_get_contents("php/build-info/git_tree_state.txt"));
+
+        $versionString = $commitHash;
+
+        if ($gitTreeState === "dirty") {
+            $versionString .= "*";
+        }
+        echo $versionString;
+        ?>
+        <br>
+        &copy;2025 Tilman Holube, all rights reserved
+    </p>
 </footer>
