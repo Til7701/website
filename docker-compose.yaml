@@ -11,6 +11,7 @@ services:
     build:
       context: ./docker/scss
     working_dir: /app
+    user: $UID:$GID
     volumes:
       - ./:/app
     entrypoint: >
@@ -20,6 +21,7 @@ services:
     build:
       context: ./docker/watcher
     working_dir: /app
+    user: $UID:$GID
     volumes:
       - ./:/app
     entrypoint: >
