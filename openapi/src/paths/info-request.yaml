@@ -2,11 +2,11 @@ get:
   summary: Get info about where the request came from and what it contained.
   description: |
     This endpoint gives information about where the request came from, like the public IP address and public port.
-  operationId: getSelfInfo
+  operationId: getRequestInfo
   responses:
     '200':
       description: OK
       content:
         application/json:
           schema:
-            $ref: '../components/schemas/selfInfo.yaml'
+            $ref: '../components/schemas/requestInfo.yaml'

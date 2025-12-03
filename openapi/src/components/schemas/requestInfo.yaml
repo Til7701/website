@@ -1,5 +1,5 @@
 description: |
-  Returned by the /self-info endpoint.
+  Returned by the /info/request endpoint.
 type: object
 required:
   - address

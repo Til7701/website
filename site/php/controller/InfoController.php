@@ -4,10 +4,10 @@ namespace controller;
 
 use view\JsonView;
 
-class SelfInfoController
+class InfoController
 {
 
-    public function workGET(): string
+    public function getRequestInfo(): string
     {
         $ipAddress = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
         $port = $_SERVER['REMOTE_PORT'] ?? -1;

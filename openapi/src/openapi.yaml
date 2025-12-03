@@ -7,10 +7,10 @@ servers:
   - url: https://til7701.de/api/v1
 
 paths:
-  /self-info:
-    $ref: './paths/self-info.yaml'
+  /info/request:
+    $ref: './paths/info-request.yaml'
 
 components:
   schemas:
-    selfInfo:
-      $ref: './components/schemas/selfInfo.yaml'
+    requestInfo:
+      $ref: './components/schemas/requestInfo.yaml'

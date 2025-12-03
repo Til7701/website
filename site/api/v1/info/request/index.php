@@ -1,15 +1,15 @@
 <?php
-include_once dirname(__DIR__, 3) . "/php/config/setup.php";
+include_once dirname(__DIR__, 4) . "/php/config/setup.php";
 
+use controller\InfoController;
 use controller\MethodNotAllowedController;
-use controller\SelfInfoController;
 
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
 
 switch ($method) {
     case 'GET':
-        $controller = new SelfInfoController();
-        echo $controller->workGET();
+        $controller = new InfoController();
+        echo $controller->getRequestInfo();
         break;
 
     default:
