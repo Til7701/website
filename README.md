@@ -12,3 +12,10 @@ docker compose up --build
 This will start a web server on port 8080. You can access the website at `http://localhost:8080`.
 It will also watch for changes to the markdown files and automatically rebuild the HTML files as well as changes to
 the SCSS files and rebuild the CSS files.
+
+## Swagger UI
+
+To update the Swagger UI, download the latest version from https://github.com/swagger-api/swagger-ui
+
+Then copy the contents of the `dist` folder into the `site/api/v1/swagger-ui` folder in this repository.
+Then revert changes in `swagger-initializer.js` to keep the customizations.

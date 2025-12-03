@@ -13,9 +13,12 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <!-- page-specific styles: -->
     <?php foreach ($cssFiles as $cssFile) { ?>
-        <link rel="stylesheet" type="text/css" href="css/<?= $cssFile ?>.css">
-        <?php
-    }
+        <?php if (str_starts_with($cssFile, "/")) { ?>
+            <link rel="stylesheet" type="text/css" href="<?= $cssFile ?>">
+        <?php } else { ?>
+            <link rel="stylesheet" type="text/css" href="css/<?= $cssFile ?>.css">
+        <?php } ?>
+    <?php }
     ?>
 
     <!-- common scripts: -->

@@ -41,7 +41,7 @@ class IndexController
                 ->setPostHierarchy($posts)
                 ->setTemplates(array("navigation.php", "error/pageNotFound.php"))
                 ->setTitle("Page not found")
-                ->setCss(array("hidden-toc", "error"));
+                ->setCss(array("hidden-toc", "fill-article"));
         }
         return $view->render();
     }
