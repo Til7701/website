@@ -1,5 +1,5 @@
 <?php
-include_once dirname(__DIR__, 4) . "/php/config/setup.php";
+include_once dirname(__DIR__, 3) . "/php/config/setup.php";
 
 use controller\InfoController;
 use controller\MethodNotAllowedController;
@@ -14,6 +14,7 @@ switch ($method) {
 
     default:
         $controller = new MethodNotAllowedController();
+        $controller->setAllowedMethods(['GET']);
         echo $controller->work();
         break;
 }
