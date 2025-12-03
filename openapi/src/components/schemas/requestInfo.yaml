@@ -1,0 +1,15 @@
+description: |
+  Returned by the /info/request endpoint.
+type: object
+required:
+  - address
+  - port
+properties:
+  address:
+    type: string
+    description: The IP address the request came from.
+    example: "1.1.1.1"
+  port:
+    type: integer
+    description: The port number the request was made from.
+    example: 12345

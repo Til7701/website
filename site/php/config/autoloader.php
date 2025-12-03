@@ -1,12 +1,12 @@
 <?php
-spl_autoload_register(function ($class_name) {
-    $class_file = str_replace("\\", "/", $class_name) . ".php";
-    $class_file = str_replace("model", "php/model", $class_file);
-    $class_file = str_replace("dao", "php/dao", $class_file);
-    $class_file = str_replace("view", "php/view", $class_file);
-    $class_file = str_replace("utils", "php/utils", $class_file);
-    $class_file = str_replace("controller", "php/controller", $class_file);
-    if (file_exists($class_file)) {
-        include_once $class_file;
+$baseDir = dirname(__DIR__);
+
+spl_autoload_register(function ($class_name) use ($baseDir) {
+    $class_file = str_replace('\\', '/', $class_name) . '.php';
+    $class_file = preg_replace('#^php/#', '', $class_file);
+    $path = $baseDir . '/' . $class_file;
+
+    if (file_exists($path)) {
+        require_once $path;
     }
 });
