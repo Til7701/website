@@ -29,7 +29,7 @@ find "$SRC_DIR" -type f -name "*.md" | while read -r md_file; do
       -s \
       --table-of-contents \
       --toc-depth=4 \
-      --strip-comments=true \
+      --strip-comments \
       -o "$html_file"
 done
 

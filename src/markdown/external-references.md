@@ -6,6 +6,55 @@ A collection of external references for various Tools and Languages I frequently
 
 #### Lombok
 
+| Documentation                                   | Sources                                           | Repository                                                                   |
+|-------------------------------------------------|---------------------------------------------------|------------------------------------------------------------------------------| 
+| [projectlombok.org](https://projectlombok.org/) | [GitHub](https://github.com/projectlombok/lombok) | [Maven Central](https://mvnrepository.com/artifact/org.projectlombok/lombok) |
+
+<details>
+<summary>Usage Example</summary>
+
+<!-- @formatter:off -->
+```xml
+<properties>
+    <lombok.version>1.18.42</lombok.version>
+</properties>
+```
+<!-- @formatter:on -->
+
+<!-- @formatter:off -->
+```xml
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>${lombok.version}</version>
+    <scope>provided</scope>
+</dependency>
+```
+<!-- @formatter:on -->
+
+<!-- @formatter:off -->
+```xml
+ <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.14.1</version>
+    <configuration>
+        <annotationProcessorPaths>
+            <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </path>
+        </annotationProcessorPaths>
+    </configuration>
+</plugin>
+```
+<!-- @formatter:on -->
+
+</details>
+
+---
+
 ## Maven
 
 ### Plugins
