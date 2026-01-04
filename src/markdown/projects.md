@@ -29,6 +29,14 @@ This is the first of my projects that other people have found and used.
 It is also the first project that received stars on GitHub.
 Unfortunately, I have not really worked on it in a while, since I am not using Windows that much anymore.
 
+## Puzzle More Days
+
+[GitHub](https://github.com/Til7701/PuzzleMoreDays) | [More Info](/projects/puzzlemoredays)
+
+An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to solve daily puzzles in various formats.
+In the future it may tell you, if you are on the
+right track or, whether it is impossible to solve the puzzle with your current approach.
+
 ---
 
 ## Schlunzis
@@ -82,7 +90,7 @@ In a group project at the University spanning one year, we developed two applica
 
 ### Th1nk
 
-[Backend](https://github.com/uol-esis/TH1) | [OpenAPI](https://github.com/uol-esis/TH1-OpenAPI) | [JS-Client](https://github.com/uol-esis/TH1-JS-Client) | [Frontend](https://github.com/uol-esis/Frontend)
+[GitHub](https://github.com/uol-esis/Th1nk)
 
 This tool can read Excel and CSV files in various formats and convert them into a database conformant format.
 The user can use converters to transform the tables into the desired format.
@@ -91,7 +99,7 @@ I was mostly involved in the API design and backend development using Java and S
 
 ### CivicSage
 
-[Backend](https://github.com/uol-esis/CivicSage-Backend) | [OpenAPI](https://github.com/uol-esis/CivicSage-OpenAPI) | [JS-Client](https://github.com/uol-esis/CivicSage-JS-Client) | [Frontend](https://github.com/uol-esis/CivicSage-Frontend)
+[GitHub](https://github.com/uol-esis/CivicSage)
 
 CivicSage allows users to search uploaded files and indexed websites using embedding search.
 Users can also chat with a chat model with the search results as context.

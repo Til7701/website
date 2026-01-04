@@ -105,6 +105,12 @@ class HardcodedPostDAO implements PostDAO
                         "from-markdown/projects/battery-status.html",
                         showInNav: false
                     ),
+                    new Post("/projects/puzzlemoredays",
+                        "Puzzle More Days",
+                        "from-markdown/projects/puzzlemoredays.html",
+                        showInNav: false,
+                        showToC: false,
+                    ),
                     new PostGroup("/projects/schlunzis",
                         "schlunzis",
                         "from-markdown/projects/schlunzis.html",
@@ -144,7 +150,6 @@ class HardcodedPostDAO implements PostDAO
                 "api/swagger-ui.php",
                 css: ["/api/v1/swagger-ui/swagger-ui.css", "fill-article"],
                 showInNav: true,
-                allowAccess: true,
                 showToC: false
             ),
             new Separator(),

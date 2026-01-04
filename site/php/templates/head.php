@@ -16,7 +16,7 @@
         <?php if (str_starts_with($cssFile, "/")) { ?>
             <link rel="stylesheet" type="text/css" href="<?= $cssFile ?>">
         <?php } else { ?>
-            <link rel="stylesheet" type="text/css" href="css/<?= $cssFile ?>.css">
+            <link rel="stylesheet" type="text/css" href="/css/<?= $cssFile ?>.css">
         <?php } ?>
     <?php }
     ?>

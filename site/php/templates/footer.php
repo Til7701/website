@@ -21,6 +21,6 @@
         echo $versionString;
         ?>
         <br>
-        &copy;2025 Tilman Holube, all rights reserved
+        &copy;2026 Tilman Holube, all rights reserved
     </p>
 </footer>
