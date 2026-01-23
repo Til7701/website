@@ -31,7 +31,7 @@ jobs:
           docker run --rm --entrypoint sh --name pandoc \
           -w /app \
           -v "$(pwd)":/app \
-          pandoc/core:3.7-alpine -c "ls -al && scripts/convert.sh"
+          pandoc/core:3.7-alpine -c "ls -al scripts && scripts/convert.sh"
 
       - name: Build CSS
         run: scripts/build-css.sh
