@@ -8,12 +8,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: pandoc/core:3.8.3-debian
     steps:
       - name: Install Dependencies
         run: |
           sudo apt-get install -y lftp
-          pandoc --version
 
       - name: Checkout repository
         uses: actions/checkout@v6
@@ -29,7 +27,11 @@ jobs:
           ./bundle.sh
 
       - name: Build HTML Templates
-        run: scripts/convert.sh
+        run: |
+          docker run --rm --name pandoc \
+          -w /app \
+          -v "$(pwd)":/app \
+          pandoc/core:3.7-alpine sh -c "scripts/convert.sh"
 
       - name: Build CSS
         run: scripts/build-css.sh
