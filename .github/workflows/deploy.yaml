@@ -28,10 +28,10 @@ jobs:
 
       - name: Build HTML Templates
         run: |
-          docker run --rm --name pandoc \
+          docker run --rm --entrypoint sh --name pandoc \
           -w /app \
           -v "$(pwd)":/app \
-          pandoc/core:3.7-alpine sh -c "ls -al && scripts/convert.sh"
+          pandoc/core:3.7-alpine -c "scripts/convert.sh"
 
       - name: Build CSS
         run: scripts/build-css.sh
