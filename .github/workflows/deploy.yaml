@@ -8,10 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    container: pandoc/core:3.8.3-debian
     steps:
       - name: Install Dependencies
         run: |
-          sudo apt-get install -y pandoc lftp
+          sudo apt-get install -y lftp
           pandoc --version
 
       - name: Checkout repository
