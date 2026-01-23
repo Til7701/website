@@ -34,7 +34,8 @@ class IndexController
                 ->setCurrentPost($currentPost)
                 ->setTemplates(array("navigation.php", $currentPost->getTemplate()))
                 ->setTitle($currentPost->getTitle())
-                ->setCss($css);
+                ->setCss($css)
+                ->setJs($currentPost->getJs());
         } else {
             http_response_code(404);
             $view = (new View())

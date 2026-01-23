@@ -1,0 +1,33 @@
+:root {
+    --cell-height: 2rem;
+}
+
+.polyomino {
+    display: block;
+    width: auto;
+    max-width: 100%;
+
+    .polyomino-cell {
+        color: var(--accent-color);
+    }
+}
+
+.polyomino-1row {
+    height: calc(var(--cell-height));
+}
+
+.polyomino-2rows {
+    height: calc(var(--cell-height) * 2);
+}
+
+.polyomino-3rows {
+    height: calc(var(--cell-height) * 3);
+}
+
+.polyomino-4rows {
+    height: calc(var(--cell-height) * 4);
+}
+
+.polyomino-5rows {
+    height: calc(var(--cell-height) * 5);
+}

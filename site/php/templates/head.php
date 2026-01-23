@@ -25,7 +25,7 @@
     <!-- page-specific scripts: -->
     <?php
     foreach ($jsFiles as $jsFile) { ?>
-        <script src="/js/scripts/<?= $jsFile ?>.js"></script>
+        <script src="/js/<?= $jsFile ?>.js"></script>
         <?php
     }
     ?>
