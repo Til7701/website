@@ -8,7 +8,7 @@ If it does not give an error message, when this specification suggests it should
 <!-- @formatter:off -->
 ```json
 {
-    "config_version": 1,
+    "spec": 1,
     "name": "Example Puzzle",
     "author": "Puzzle More Days",
     "description": "Fill the board with trominoes.",
@@ -47,15 +47,16 @@ If it does not give an error message, when this specification suggests it should
 This file can be loaded by Puzzle More Days to add a new puzzle collection for the user to solve.
 The fields have the following meaning:
 
-| Field          | Type                 | Required | Description                                                                                                                                                           | Default   |
-|----------------|----------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| config_version | `i32`                | true     | The version of the configuration format. The value MUST be set to `1`. This field MUST be the first field in the file (this requirement may be lifted in the future). | -         |
-| name           | `String`             | true     | The name of the puzzle collection. MUST not be blank. The name SHOULD be short (5 to 20 characters) and not contain the word `Collection`.                            | -         |
-| author         | `String`             | true     | The author of the puzzle collection. MUST not be blank.                                                                                                               | -         |
-| description    | `String`             | false    | A short description of the puzzle collection. MUST not be blank if specified.                                                                                         | None      |
-| custom_tiles   | `Map<String, Tile>`  | false    | A map of custom tile definitions to reuse in this file. See [Custom Tiles](#custom-tiles) for details.                                                                | Empty Map |
-| custom_boards  | `Map<String, Board>` | false    | A map of custom board definitions to reuse in this file. See [Custom Boards](#custom-boards) for details.                                                             | Empty Map |
-| puzzles        | `List<Puzzle>`       | true     | The list of puzzles in this collection. See [Puzzles](#puzzles) for details.                                                                                          | -         |
+| Field         | Type                 | Required | Description                                                                                                                                | Default   |
+|---------------|----------------------|----------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| spec          | `i32`                | true     | The version of the configuration format. The value MUST be set to `1`.                                                                     | -         |
+| name          | `String`             | true     | The name of the puzzle collection. MUST not be blank. The name SHOULD be short (5 to 20 characters) and not contain the word `Collection`. | -         |
+| author        | `String`             | true     | The author of the puzzle collection. MUST not be blank.                                                                                    | -         |
+| version       | `String`             | false    | The version of the collection set by the author. This may be any string. This is not checked, it is just displayed to the user.            | -         |
+| description   | `String`             | false    | A short description of the puzzle collection. MUST not be blank if specified.                                                              | None      |
+| custom_tiles  | `Map<String, Tile>`  | false    | A map of custom tile definitions to reuse in this file. See [Custom Tiles](#custom-tiles) for details.                                     | Empty Map |
+| custom_boards | `Map<String, Board>` | false    | A map of custom board definitions to reuse in this file. See [Custom Boards](#custom-boards) for details.                                  | Empty Map |
+| puzzles       | `List<Puzzle>`       | true     | The list of puzzles in this collection. See [Puzzles](#puzzles) for details.                                                               | -         |
 
 ## Custom Tiles
 
@@ -82,6 +83,7 @@ It has the following fields:
 |-----------------|-----------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 | name            | `String`              | true     | The name of the puzzle. MUST not be blank.                                                                                                                                                                  | -         |
 | description     | `String`              | false    | A short description of the puzzle. MUST not be blank if specified.                                                                                                                                          | None      |
+| difficulty      | `Difficulty`          | false    | The difficulty of the puzzle. If provided, it MUST be one of: `Easy`, `Medium`, `Hard` or `Expert`.                                                                                                         | None      |
 | tiles           | `List<Tile>`          | true     | The list of tiles available to solve the puzzle. This list MUST not be empty.                                                                                                                               | -         |
 | board           | `Board`               | true     | The board to solve the puzzle on. See below for details.                                                                                                                                                    | -         |   
 | additional_info | `Map<String, String>` | false    | Additional information about the puzzle. This may contain statistics about how many solutions there are, or anything else, which is in a key-value format and does not feel right to be in the description. | Empty Map |   
@@ -104,15 +106,32 @@ Example:
 
 The following standard tiles are available:
 
-| Name            | Shape                                                                   |
-|-----------------|-------------------------------------------------------------------------|
-| **Trominoes**   |                                                                         |
-| `L3`            | ![L3 Tile](site/assets/images/puzzlemoredays/tiles/L3.svg){.inline-svg} |
-| `I3`            | ![I3 Tile](site/assets/images/puzzlemoredays/tiles/I3.svg){.inline-svg} |
-| **Tetrominoes** |                                                                         |
-| **Pentominoes** |                                                                         |
-| `Z5`            | ![I3 Tile](site/assets/images/puzzlemoredays/tiles/Z5.svg){.inline-svg} |
-| ...             | ... More are available. List will be updated soon.                      |
+| Name            | Shape                                                                     |
+|-----------------|---------------------------------------------------------------------------|
+| **Trominoes**   |                                                                           |
+| `I3`            | ![I3 Tile](site/assets/images/puzzlemoredays/tiles/3/I3.svg){.inline-svg} |
+| `L3`            | ![L3 Tile](site/assets/images/puzzlemoredays/tiles/3/L3.svg){.inline-svg} |
+| **Tetrominoes** |                                                                           |
+| `I4`            | ![I4 Tile](site/assets/images/puzzlemoredays/tiles/4/I4.svg){.inline-svg} |
+| `J4`            | ![L4 Tile](site/assets/images/puzzlemoredays/tiles/4/J4.svg){.inline-svg} |
+| `L4`            | ![L4 Tile](site/assets/images/puzzlemoredays/tiles/4/L4.svg){.inline-svg} |
+| `O4`            | ![O4 Tile](site/assets/images/puzzlemoredays/tiles/4/O4.svg){.inline-svg} |
+| `S4`            | ![S4 Tile](site/assets/images/puzzlemoredays/tiles/4/S4.svg){.inline-svg} |
+| `T4`            | ![T4 Tile](site/assets/images/puzzlemoredays/tiles/4/T4.svg){.inline-svg} |
+| `Z4`            | ![Z4 Tile](site/assets/images/puzzlemoredays/tiles/4/Z4.svg){.inline-svg} |
+| **Pentominoes** |                                                                           |
+| `F5`            | ![F5 Tile](site/assets/images/puzzlemoredays/tiles/5/F5.svg){.inline-svg} |
+| `I5`            | ![I5 Tile](site/assets/images/puzzlemoredays/tiles/5/I5.svg){.inline-svg} |
+| `L5`            | ![L5 Tile](site/assets/images/puzzlemoredays/tiles/5/L5.svg){.inline-svg} |
+| `N5`            | ![N5 Tile](site/assets/images/puzzlemoredays/tiles/5/N5.svg){.inline-svg} |
+| `P5`            | ![P5 Tile](site/assets/images/puzzlemoredays/tiles/5/P5.svg){.inline-svg} |
+| `T5`            | ![T5 Tile](site/assets/images/puzzlemoredays/tiles/5/T5.svg){.inline-svg} |
+| `U5`            | ![U5 Tile](site/assets/images/puzzlemoredays/tiles/5/U5.svg){.inline-svg} |
+| `V5`            | ![V5 Tile](site/assets/images/puzzlemoredays/tiles/5/V5.svg){.inline-svg} |
+| `W5`            | ![W5 Tile](site/assets/images/puzzlemoredays/tiles/5/W5.svg){.inline-svg} |
+| `X5`            | ![X5 Tile](site/assets/images/puzzlemoredays/tiles/5/X5.svg){.inline-svg} |
+| `Y5`            | ![Y5 Tile](site/assets/images/puzzlemoredays/tiles/5/Y5.svg){.inline-svg} |
+| `Z5`            | ![I3 Tile](site/assets/images/puzzlemoredays/tiles/5/Z5.svg){.inline-svg} |
 
 ### Array
 
@@ -133,7 +152,7 @@ For example, the following array defines a Z5 tile:
 
 Which, as a reminder, looks like this:
 
-![Z5 Tile](site/assets/images/puzzlemoredays/tiles/Z5.svg){.inline-svg}
+![Z5 Tile](site/assets/images/puzzlemoredays/tiles/5/Z5.svg){.inline-svg}
 
 ## Board
 
