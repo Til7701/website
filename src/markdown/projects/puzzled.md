@@ -1,13 +1,15 @@
-# Puzzle More Days
+# Puzzled
 
 [GitHub](https://github.com/Til7701/PuzzleMoreDays)
-[How to create your own puzzles](/projects/puzzlemoredays/puzzle-collection-spec)
 
-An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to solve daily puzzles in various formats.
-In the future it may tell you, if you are on the
-right track or, whether it is impossible to solve the puzzle with your current approach.
+An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to solve puzzles in various formats.
+It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with your current
+approach.
 
-![Screenshot of the Application](/assets/images/puzzlemoredays.png){data-external="1"}
+You can create your own puzzle layouts and load them into the application.
+[How to create your own puzzles](/projects/puzzled/puzzle-collection-spec)
+
+![Screenshot of the Application](/assets/images/puzzled/puzzled.png){data-external="1"}
 
 This project is still in early development.
 It is the first project I am developing using Adwaita, GTK and Rust.

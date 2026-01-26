@@ -109,29 +109,29 @@ The following standard tiles are available:
 | Name            | Shape                                                                     |
 |-----------------|---------------------------------------------------------------------------|
 | **Trominoes**   |                                                                           |
-| `I3`            | ![I3 Tile](site/assets/images/puzzlemoredays/tiles/3/I3.svg){.inline-svg} |
-| `L3`            | ![L3 Tile](site/assets/images/puzzlemoredays/tiles/3/L3.svg){.inline-svg} |
+| `I3`            | ![I3 Tile](site/assets/images/puzzled/tiles/3/I3.svg){.inline-svg} |
+| `L3`            | ![L3 Tile](site/assets/images/puzzled/tiles/3/L3.svg){.inline-svg} |
 | **Tetrominoes** |                                                                           |
-| `I4`            | ![I4 Tile](site/assets/images/puzzlemoredays/tiles/4/I4.svg){.inline-svg} |
-| `J4`            | ![L4 Tile](site/assets/images/puzzlemoredays/tiles/4/J4.svg){.inline-svg} |
-| `L4`            | ![L4 Tile](site/assets/images/puzzlemoredays/tiles/4/L4.svg){.inline-svg} |
-| `O4`            | ![O4 Tile](site/assets/images/puzzlemoredays/tiles/4/O4.svg){.inline-svg} |
-| `S4`            | ![S4 Tile](site/assets/images/puzzlemoredays/tiles/4/S4.svg){.inline-svg} |
-| `T4`            | ![T4 Tile](site/assets/images/puzzlemoredays/tiles/4/T4.svg){.inline-svg} |
-| `Z4`            | ![Z4 Tile](site/assets/images/puzzlemoredays/tiles/4/Z4.svg){.inline-svg} |
+| `I4`            | ![I4 Tile](site/assets/images/puzzled/tiles/4/I4.svg){.inline-svg} |
+| `J4`            | ![L4 Tile](site/assets/images/puzzled/tiles/4/J4.svg){.inline-svg} |
+| `L4`            | ![L4 Tile](site/assets/images/puzzled/tiles/4/L4.svg){.inline-svg} |
+| `O4`            | ![O4 Tile](site/assets/images/puzzled/tiles/4/O4.svg){.inline-svg} |
+| `S4`            | ![S4 Tile](site/assets/images/puzzled/tiles/4/S4.svg){.inline-svg} |
+| `T4`            | ![T4 Tile](site/assets/images/puzzled/tiles/4/T4.svg){.inline-svg} |
+| `Z4`            | ![Z4 Tile](site/assets/images/puzzled/tiles/4/Z4.svg){.inline-svg} |
 | **Pentominoes** |                                                                           |
-| `F5`            | ![F5 Tile](site/assets/images/puzzlemoredays/tiles/5/F5.svg){.inline-svg} |
-| `I5`            | ![I5 Tile](site/assets/images/puzzlemoredays/tiles/5/I5.svg){.inline-svg} |
-| `L5`            | ![L5 Tile](site/assets/images/puzzlemoredays/tiles/5/L5.svg){.inline-svg} |
-| `N5`            | ![N5 Tile](site/assets/images/puzzlemoredays/tiles/5/N5.svg){.inline-svg} |
-| `P5`            | ![P5 Tile](site/assets/images/puzzlemoredays/tiles/5/P5.svg){.inline-svg} |
-| `T5`            | ![T5 Tile](site/assets/images/puzzlemoredays/tiles/5/T5.svg){.inline-svg} |
-| `U5`            | ![U5 Tile](site/assets/images/puzzlemoredays/tiles/5/U5.svg){.inline-svg} |
-| `V5`            | ![V5 Tile](site/assets/images/puzzlemoredays/tiles/5/V5.svg){.inline-svg} |
-| `W5`            | ![W5 Tile](site/assets/images/puzzlemoredays/tiles/5/W5.svg){.inline-svg} |
-| `X5`            | ![X5 Tile](site/assets/images/puzzlemoredays/tiles/5/X5.svg){.inline-svg} |
-| `Y5`            | ![Y5 Tile](site/assets/images/puzzlemoredays/tiles/5/Y5.svg){.inline-svg} |
-| `Z5`            | ![I3 Tile](site/assets/images/puzzlemoredays/tiles/5/Z5.svg){.inline-svg} |
+| `F5`            | ![F5 Tile](site/assets/images/puzzled/tiles/5/F5.svg){.inline-svg} |
+| `I5`            | ![I5 Tile](site/assets/images/puzzled/tiles/5/I5.svg){.inline-svg} |
+| `L5`            | ![L5 Tile](site/assets/images/puzzled/tiles/5/L5.svg){.inline-svg} |
+| `N5`            | ![N5 Tile](site/assets/images/puzzled/tiles/5/N5.svg){.inline-svg} |
+| `P5`            | ![P5 Tile](site/assets/images/puzzled/tiles/5/P5.svg){.inline-svg} |
+| `T5`            | ![T5 Tile](site/assets/images/puzzled/tiles/5/T5.svg){.inline-svg} |
+| `U5`            | ![U5 Tile](site/assets/images/puzzled/tiles/5/U5.svg){.inline-svg} |
+| `V5`            | ![V5 Tile](site/assets/images/puzzled/tiles/5/V5.svg){.inline-svg} |
+| `W5`            | ![W5 Tile](site/assets/images/puzzled/tiles/5/W5.svg){.inline-svg} |
+| `X5`            | ![X5 Tile](site/assets/images/puzzled/tiles/5/X5.svg){.inline-svg} |
+| `Y5`            | ![Y5 Tile](site/assets/images/puzzled/tiles/5/Y5.svg){.inline-svg} |
+| `Z5`            | ![I3 Tile](site/assets/images/puzzled/tiles/5/Z5.svg){.inline-svg} |
 
 ### Array
 
@@ -152,7 +152,7 @@ For example, the following array defines a Z5 tile:
 
 Which, as a reminder, looks like this:
 
-![Z5 Tile](site/assets/images/puzzlemoredays/tiles/5/Z5.svg){.inline-svg}
+![Z5 Tile](site/assets/images/puzzled/tiles/5/Z5.svg){.inline-svg}
 
 ## Board
 
@@ -163,14 +163,35 @@ Boards can be referenced by name, defined as a [Simple Board](#simple-board) or 
 ### Name
 
 Similar to tiles, a board can be referenced by its name as a `String`.
-Currently, there are no standard boards, so only custom boards defined in the `custom_boards` map can be referenced this
-way.
+Standard boards or custom boards defined in the `custom_boards` map can be referenced this way.
 
 Example:
 
 ```json
-"3x3"
+"my_custom_board"
 ```
+
+The following format of standard boards are available:
+
+You can define a simple rectangular board of any size using the following naming scheme:
+`<width>x<height>`, where `<width>` and `<height>` are positive integers.
+The following board definitions will result in the same board:
+
+```json
+"4x3"
+```
+
+<!-- @formatter:off -->
+```json
+{
+    "layout": [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ]
+}
+```
+<!-- @formatter:on -->
 
 ### Simple Board
 

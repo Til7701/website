@@ -31,7 +31,7 @@ Unfortunately, I have not really worked on it in a while, since I am not using W
 
 ## Puzzle More Days
 
-[GitHub](https://github.com/Til7701/PuzzleMoreDays) | [More Info](/projects/puzzlemoredays)
+[GitHub](https://github.com/Til7701/PuzzleMoreDays) | [More Info](/projects/puzzled)
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to solve daily puzzles in various formats.
 In the future it may tell you, if you are on the
