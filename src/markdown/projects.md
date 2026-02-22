@@ -29,13 +29,13 @@ This is the first of my projects that other people have found and used.
 It is also the first project that received stars on GitHub.
 Unfortunately, I have not really worked on it in a while, since I am not using Windows that much anymore.
 
-## Puzzle More Days
+## Puzzled
 
 [GitHub](https://github.com/Til7701/PuzzleMoreDays) | [More Info](/projects/puzzled)
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to solve daily puzzles in various formats.
-In the future it may tell you, if you are on the
-right track or, whether it is impossible to solve the puzzle with your current approach.
+It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with your current
+approach.
 
 ---
 
