@@ -1,4 +1,4 @@
-[Source Code (GitHub)](https://github.com/Til7701/PuzzleMoreDays)
+[Source Code (GitHub)](https://github.com/Til7701/Puzzled)
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to solve puzzles in various formats.
 It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with your current
@@ -22,6 +22,16 @@ For that you have to create a JSON file following the specification defined
 [here](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md).
 
 ## Releases
+
+### 1.0.0 (2026-03-10)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.0.0)
+
+- Add more puzzles to the Hexomino and Tromino collections.
+- You now get stars for solving puzzles using fewer hints.
+- Improve solver feedback, if no solution is available.
+- Allow marking puzzles as unsolvable.
+- Fixed name for menu entry for about dialog.
 
 ### 0.4.0 (2026-02-22)
 
