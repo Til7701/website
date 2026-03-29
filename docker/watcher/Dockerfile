@@ -1,3 +1,3 @@
-FROM pandoc/core:3.8.3-alpine
+FROM pandoc/core:3.9.0-alpine
 
 RUN apk add --no-cache inotify-tools
