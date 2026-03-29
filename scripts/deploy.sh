@@ -10,6 +10,8 @@ set ftp:ssl-force true
 set ftp:ssl-protect-data true
 set ftp:passive-mode yes
 
+lftp --version
+
 LOCAL_DIR="site"
 
 echo "Uploading..."

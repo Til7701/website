@@ -4,7 +4,8 @@ An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to so
 It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with your current
 approach.
 
-![Screenshot of the Application](/assets/images/puzzled/screenshot-year-dark.png){data-external="1"}
+![The puzzle selection](/assets/images/puzzled/screenshot-start-dark.png){data-external="1"}
+![While solving a puzzle](/assets/images/puzzled/screenshot-year-dark.png){data-external="1"}
 
 This is the first project I am developing using Adwaita, GTK and Rust.
 
@@ -22,6 +23,25 @@ For that you have to create a JSON file following the specification defined
 [here](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md).
 
 ## Releases
+
+[Install from Flathub](https://flathub.org/en/apps/de.til7701.Puzzled) | [GitHub Releases](https://github.com/Til7701/Puzzled/releases)
+
+### 1.1.0 (2026-03-27)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.1.0)
+
+- Added the ability to generate random puzzles.
+- Added more puzzles to the pentominoes collection.
+- Added popover to explain community collections.
+  
+
+### 1.0.1 (2026-03-14)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.0.1)
+
+- Update icon and description for Flathub.
+- Set log level to info.
+         
 
 ### 1.0.0 (2026-03-10)
 

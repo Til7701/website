@@ -2,6 +2,8 @@
 
 set -e
 
+pandoc --version
+
 SRC_DIR="src/markdown"
 TARGET_DIR="site/php/templates/from-markdown"
 TEMPLATE_FILE="src/html/template.html"
@@ -24,7 +26,14 @@ find "$SRC_DIR" -type f -name "*.md" | while read -r md_file; do
 
     echo "Converting $md_file to $html_file using $TEMPLATE_FILE..."
 
-    pandoc "$md_file" --template="$TEMPLATE_FILE" -s --table-of-contents --embed-resources -o "$html_file"
+   pandoc "$md_file" \
+        --template="$TEMPLATE_FILE" \
+        -s \
+        --table-of-contents \
+        --toc-depth=4 \
+        --embed-resources \
+        --strip-comments \
+        -o "$html_file"
 done
 
 echo "All Markdown files have been converted to HTML in $TARGET_DIR using the custom template."
