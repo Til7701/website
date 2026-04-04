@@ -42,7 +42,7 @@ class PostController
                 ->setPostHierarchy($posts)
                 ->setTemplates(array("navigation.php", "error/pageNotFound.php"))
                 ->setTitle("Page not found")
-                ->setCss(array("hidden-toc", "fill-article"));
+                ->setCss(array("hidden-toc", "error-page"));
         }
         return $view->render();
     }

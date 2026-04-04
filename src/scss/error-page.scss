@@ -1,0 +1,15 @@
+main {
+    justify-content: center;
+
+    article {
+        margin: auto;
+        width: 100%;
+        max-width: 100%;
+
+        img {
+            max-width: 66%;
+            margin: auto;
+            display: block;
+        }
+    }
+}

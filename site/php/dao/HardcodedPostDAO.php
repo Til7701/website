@@ -144,7 +144,7 @@ class HardcodedPostDAO implements PostDAO
             ),
             new Separator(),
             new Post("/api-docs",
-                "API Documentation",
+                "API Docs",
                 "api/swagger-ui.php",
                 css: ["/api/v1/swagger-ui/swagger-ui.css", "fill-article"],
                 showInNav: true,
