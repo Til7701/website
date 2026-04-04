@@ -2,9 +2,9 @@
 
 set -e
 
-width=26
-height=12
-factor=50
+width=400
+height=20
+factor=1
 
 for (( i = 0; i < width; i++ )); do
     for (( j = 0; j < height; j++ )); do
