@@ -7,7 +7,7 @@ use dao\PostDAOFactory;
 use model\Post;
 use view\View;
 
-class IndexController
+class PostController
 {
 
     private PostDAO $postDAO;
