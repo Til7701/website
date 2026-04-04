@@ -1,14 +1,3 @@
-function HideTopbarPlugin() {
-    // this plugin overrides the Topbar component to return nothing
-    return {
-        components: {
-            Topbar: function () {
-                return null
-            }
-        }
-    }
-}
-
 window.onload = function () {
     //<editor-fold desc="Changeable Configuration Block">
 
@@ -23,7 +12,6 @@ window.onload = function () {
         ],
         plugins: [
             SwaggerUIBundle.plugins.DownloadUrl,
-            HideTopbarPlugin,
         ],
         layout: "StandaloneLayout",
         validatorUrl: "none",
