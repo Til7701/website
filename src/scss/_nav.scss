@@ -34,7 +34,7 @@ nav {
     a {
         display: block;
         padding: 0.4rem 0.8rem;
-        border-radius: 0.25rem;
+        border-radius: var(--border-radius);
         text-decoration: none;
     }
 
