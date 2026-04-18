@@ -9,7 +9,7 @@
         </div>
     </div>
 
-    <p><?php
+    <p><a href="https://github.com/Til7701/website">Source</a> <?php
         $commitHash = trim(file_get_contents("php/build-info/commit_hash.txt"));
         $gitTreeState = trim(file_get_contents("php/build-info/git_tree_state.txt"));
 
@@ -21,6 +21,8 @@
         echo $versionString;
         ?>
         <br>
-        &copy;2026 Tilman Holube, all rights reserved
+        &copy;2026 Tilman Holube,
+        <br>
+        licensed under <a href="/LICENSE">GPL-3.0</a>
     </p>
 </footer>

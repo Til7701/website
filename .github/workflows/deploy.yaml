@@ -39,6 +39,9 @@ jobs:
       - name: Create Build Info
         run: scripts/build-info.sh
 
+      - name: Copy License
+        run: cp LICENSE site/
+
       - name: Deploy to Server
         run: |
           lftp -u "${{ secrets.FTP_USER }}","${{ secrets.FTP_SECRET }}" "${{ secrets.FTP_HOST }}" <<EOF

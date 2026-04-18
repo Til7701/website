@@ -6,6 +6,7 @@ site/api/v1/openapi.json
 site/php/build-info
 site/php/templates/from-markdown
 site/css
+site/LICENSE
 
 scripts/.env
 target/
