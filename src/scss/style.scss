@@ -21,11 +21,22 @@
         --text-color: #222222;
         --footer-text-color: #555555;
     }
+
+    @font-face {
+        font-family: Adwaita-Sans;
+        src: url(/assets/fonts/adwaita/sans/AdwaitaSans-Regular.ttf);
+        font-style: normal;
+    }
+    @font-face {
+        font-family: Adwaita-Sans;
+        src: url(/assets/fonts/adwaita/sans/AdwaitaSans-Italic.ttf);
+        font-style: italic;
+    }
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Adwaita-Sans;
     background-color: var(--background-color);
     color: var(--text-color);
     display: grid;

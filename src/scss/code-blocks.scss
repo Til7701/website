@@ -9,9 +9,35 @@
     @media (prefers-color-scheme: light) {
         /* TODO */
     }
+
+    @font-face {
+        font-family: Adwaita-Mono;
+        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-Regular.ttf);
+        font-style: normal;
+        font-weight: normal;
+    }
+    @font-face {
+        font-family: Adwaita-Mono;
+        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-Italic.ttf);
+        font-style: italic;
+        font-weight: normal;
+    }
+    @font-face {
+        font-family: Adwaita-Mono;
+        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-Bold.ttf);
+        font-style: normal;
+        font-weight: bold;
+    }
+    @font-face {
+        font-family: Adwaita-Mono;
+        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-BoldItalic.ttf);
+        font-style: italic;
+        font-weight: bold;
+    }
 }
 
 code {
+    font-family: Adwaita-Mono;
     hyphens: manual;
     white-space: pre-wrap;
     background-color: var(--code-background-color);
