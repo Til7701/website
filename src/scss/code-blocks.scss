@@ -12,25 +12,25 @@
 
     @font-face {
         font-family: Adwaita-Mono;
-        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-Regular.ttf);
+        src: url(/assets/fonts/adwaita/mono/AdwaitaMono-Regular.ttf);
         font-style: normal;
         font-weight: normal;
     }
     @font-face {
         font-family: Adwaita-Mono;
-        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-Italic.ttf);
+        src: url(/assets/fonts/adwaita/mono/AdwaitaMono-Italic.ttf);
         font-style: italic;
         font-weight: normal;
     }
     @font-face {
         font-family: Adwaita-Mono;
-        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-Bold.ttf);
+        src: url(/assets/fonts/adwaita/mono/AdwaitaMono-Bold.ttf);
         font-style: normal;
         font-weight: bold;
     }
     @font-face {
         font-family: Adwaita-Mono;
-        src: url(/assets/fonts/adwaita/sans/AdwaitaMono-BoldItalic.ttf);
+        src: url(/assets/fonts/adwaita/mono/AdwaitaMono-BoldItalic.ttf);
         font-style: italic;
         font-weight: bold;
     }
@@ -42,9 +42,9 @@ code {
     white-space: pre-wrap;
     background-color: var(--code-background-color);
     color: var(--code-text-color);
-    border-radius: 0.25rem;
+    border-radius: var(--border-radius);
     font-size: 0.9rem;
-    padding: 0.05rem;
+    padding: 0.05rem 0.2rem;
 }
 
 div.sourceCode {
@@ -52,7 +52,7 @@ div.sourceCode {
     background-color: var(--code-background-color);
     color: var(--code-text-color);
     padding: 1rem;
-    border-radius: 0.25rem;
+    border-radius: var(--border-radius);
     overflow-x: auto;
     font-size: 0.9rem;
     margin-top: 0.4rem;
@@ -96,7 +96,7 @@ div.sourceCode {
         cursor: pointer;
         background: var(--code-background-color);
         border: 1px solid var(--border-color);
-        border-radius: 0.25rem;
+        border-radius: var(--border-radius);
         color: var(--code-text-color);
 
         opacity: 0;
