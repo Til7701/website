@@ -144,6 +144,13 @@ class HardcodedPostDAO implements PostDAO
                 showInNav: false
             ),
             new Separator(),
+            new Post("/about-you",
+                "About You",
+                "from-markdown/about-you.php",
+                css: [],
+                showInNav: false,
+                showToC: false
+            ),
             new Post("/api-docs",
                 "API Docs",
                 "api/swagger-ui.php",
