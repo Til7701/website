@@ -103,6 +103,10 @@ a {
     color: var(--accent-color);
 }
 
+a[href^="http"] {
+    white-space: nowrap;
+}
+
 a[href^="http"]::after {
     content: "";
     display: inline-block;

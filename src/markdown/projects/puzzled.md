@@ -1,6 +1,7 @@
 [Source Code (GitHub)](https://github.com/Til7701/Puzzled)
 
-An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application to solve puzzles in various formats.
+An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application for Linux to solve polyform puzzles in
+various formats.
 It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with your current
 approach.
 
@@ -9,8 +10,8 @@ approach.
 
 This is the first project I am developing using Adwaita, GTK and Rust.
 
-I first saw Puzzle A Day in Canada while studying abroad.
-I liked it so much, that I brought it back to Germany with me.
+I first saw Puzzle A Day in Canada while studying abroad and liked it so much, that I brought it back to Germany with
+me.
 After solving it every day for a year, I wanted to know how many solutions there are.
 So I wrote a solver in Java which can be found [here](https://github.com/Til7701/puzzle-a-day).
 After finding all solutions for the default layout, I tried out various other layouts.
@@ -18,9 +19,11 @@ However, I had to recompile for each layout change, and it was not very user-fri
 Thus, I decided to use this project to make myself familiar with Rust and GTK development and provide a more
 user-friendly interface.
 
+You can solve any Polyomino puzzle with Puzzled, as long as you can provide the layout in the correct format.
 You can create your own puzzle layouts and load them into the application.
-For that you have to create a JSON file following the specification defined
+In order for Puzzled to import the layouts, you have to create a JSON file following the specification defined
 [here](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md).
+If you have any problems with creating your own collection, feel free to open an issue on GitHub.
 
 ## Releases
 
@@ -33,7 +36,6 @@ For that you have to create a JSON file following the specification defined
 - Added the ability to generate random puzzles.
 - Added more puzzles to the pentominoes collection.
 - Added popover to explain community collections.
-  
 
 ### 1.0.1 (2026-03-14)
 
@@ -41,7 +43,6 @@ For that you have to create a JSON file following the specification defined
 
 - Update icon and description for Flathub.
 - Set log level to info.
-         
 
 ### 1.0.0 (2026-03-10)
 
