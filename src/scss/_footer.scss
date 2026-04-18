@@ -14,8 +14,6 @@ footer {
 
     input {
         display: none;
-        margin: 0;
-        padding: 0;
     }
 
     p {
@@ -29,13 +27,7 @@ footer {
 
     .cookie-banner {
         border-bottom: 1px solid var(--border-color);
-        padding: 0.5rem 0.5rem 0.75rem;
-
-        p {
-            margin-bottom: 0.5rem;
-            margin-top: 0;
-            padding: 0;
-        }
+        width: 100%;
 
         .accept-button {
             background-color: var(--border-color);
@@ -53,7 +45,6 @@ footer {
 
         .cookie-banner {
             width: 100vw;
-            padding: 0.5rem 0 0.75rem 0;
         }
     }
 
