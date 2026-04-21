@@ -33,6 +33,7 @@ find "$SRC_DIR" -type f -name "*.md" | while read -r md_file; do
         --toc-depth=4 \
         --embed-resources \
         --strip-comments \
+         --lua-filter="src/pandoc/filters/wrap-tables.lua" \
         -o "$html_file"
 done
 
