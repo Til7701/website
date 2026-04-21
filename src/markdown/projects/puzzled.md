@@ -1,4 +1,4 @@
-[Source Code (GitHub)](https://github.com/Til7701/Puzzled) | [Collection Spec](/projects/puzzled-spec)
+[Source Code (GitHub)](https://github.com/Til7701/Puzzled) | [Collection Spec](/projects/puzzled/collection-spec)
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application for Linux to solve polyform puzzles in
 various formats.
@@ -22,7 +22,7 @@ user-friendly interface.
 You can solve any Polyomino puzzle with Puzzled, as long as you can provide the layout in the correct format.
 You can create your own puzzle layouts and load them into the application.
 In order for Puzzled to import the layouts, you have to create a JSON file following the specification defined
-[here](/projects/puzzled-spec).
+[here](/projects/puzzled/collection-spec).
 If you have any problems with creating your own collection, feel free to open an issue on GitHub.
 
 ## Installation

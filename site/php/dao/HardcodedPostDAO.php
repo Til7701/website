@@ -106,18 +106,19 @@ class HardcodedPostDAO implements PostDAO
                         "from-markdown/projects/battery-status.html",
                         showInNav: false
                     ),
-                    new Post("/projects/puzzled",
+                    new PostGroup("/projects/puzzled",
                         "Puzzled",
                         "from-markdown/projects/puzzled.html",
+                        [
+                            new Post("/projects/puzzled/collection-spec",
+                                "Collection Spec",
+                                "from-markdown/projects/puzzled/collection-spec.html",
+                                css: ["polyomino", "tables", "code-blocks", "code-blocks-json"],
+                                js: ["code-block-copy"],
+                                showInNav: false
+                            )],
                         css: ["code-blocks", "code-blocks-bash"],
                         js: ["code-block-copy"],
-                    ),
-                    new Post("/projects/puzzled-spec",
-                        "Puzzled Collection Spec",
-                        "from-markdown/projects/puzzled-spec.html",
-                        css: ["polyomino", "tables", "code-blocks", "code-blocks-json"],
-                        js: ["code-block-copy"],
-                        showInNav: false
                     ),
                     new PostGroup("/projects/schlunzis",
                         "schlunzis",

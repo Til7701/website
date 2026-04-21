@@ -1,4 +1,4 @@
-[Maintained here](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md)
+[Maintained alongside Puzzled on GitHub](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md)
 
 You can create your own puzzle collection by creating a JSON file with the following structure.
 Note that any behavior not explicitly described here is subject to change without prior notice or increased version
@@ -114,70 +114,70 @@ Example:
 
 The following standard tiles are available:
 
-| Name            | Shape                                                         | Required Version |
-|-----------------|---------------------------------------------------------------|------------------|
-| **Domino**      |                                                               |                  |
-| `I2`            | ![I2 Tile](src/markdown/projects/tiles/2/I2.svg){.inline-svg} |                  |
-| **Trominoes**   |                                                               |                  |
-| `I3`            | ![I3 Tile](src/markdown/projects/tiles/3/I3.svg){.inline-svg} |                  |
-| `L3`            | ![L3 Tile](src/markdown/projects/tiles/3/L3.svg){.inline-svg} |                  |
-| **Tetrominoes** |                                                               |                  |
-| `I4`            | ![I4 Tile](src/markdown/projects/tiles/4/I4.svg){.inline-svg} |                  |
-| `J4`            | ![L4 Tile](src/markdown/projects/tiles/4/J4.svg){.inline-svg} |                  |
-| `L4`            | ![L4 Tile](src/markdown/projects/tiles/4/L4.svg){.inline-svg} |                  |
-| `O4`            | ![O4 Tile](src/markdown/projects/tiles/4/O4.svg){.inline-svg} |                  |
-| `S4`            | ![S4 Tile](src/markdown/projects/tiles/4/S4.svg){.inline-svg} |                  |
-| `T4`            | ![T4 Tile](src/markdown/projects/tiles/4/T4.svg){.inline-svg} |                  |
-| `Z4`            | ![Z4 Tile](src/markdown/projects/tiles/4/Z4.svg){.inline-svg} |                  |
-| **Pentominoes** |                                                               |                  |
-| `F5`            | ![F5 Tile](src/markdown/projects/tiles/5/F5.svg){.inline-svg} |                  |
-| `I5`            | ![I5 Tile](src/markdown/projects/tiles/5/I5.svg){.inline-svg} |                  |
-| `L5`            | ![L5 Tile](src/markdown/projects/tiles/5/L5.svg){.inline-svg} |                  |
-| `N5`            | ![N5 Tile](src/markdown/projects/tiles/5/N5.svg){.inline-svg} |                  |
-| `P5`            | ![P5 Tile](src/markdown/projects/tiles/5/P5.svg){.inline-svg} |                  |
-| `T5`            | ![T5 Tile](src/markdown/projects/tiles/5/T5.svg){.inline-svg} |                  |
-| `U5`            | ![U5 Tile](src/markdown/projects/tiles/5/U5.svg){.inline-svg} |                  |
-| `V5`            | ![V5 Tile](src/markdown/projects/tiles/5/V5.svg){.inline-svg} |                  |
-| `W5`            | ![W5 Tile](src/markdown/projects/tiles/5/W5.svg){.inline-svg} |                  |
-| `X5`            | ![X5 Tile](src/markdown/projects/tiles/5/X5.svg){.inline-svg} |                  |
-| `Y5`            | ![Y5 Tile](src/markdown/projects/tiles/5/Y5.svg){.inline-svg} |                  |
-| `Z5`            | ![I3 Tile](src/markdown/projects/tiles/5/Z5.svg){.inline-svg} |                  |
-| **Hexominoes**  |                                                               |                  |
-| `A6`            | ![A6 Tile](src/markdown/projects/tiles/6/A6.svg){.inline-svg} | 0.3.0            |
-| `B6`            | ![B6 Tile](src/markdown/projects/tiles/6/B6.svg){.inline-svg} | 0.3.0            |
-| `C6`            | ![C6 Tile](src/markdown/projects/tiles/6/C6.svg){.inline-svg} | 0.3.0            |
-| `D6`            | ![D6 Tile](src/markdown/projects/tiles/6/D6.svg){.inline-svg} | 0.3.0            |
-| `F6`            | ![F6 Tile](src/markdown/projects/tiles/6/F6.svg){.inline-svg} | 0.3.0            |
-| `f6`            | ![f6 Tile](src/markdown/projects/tiles/6/f6.svg){.inline-svg} | 0.3.0            |
-| `G6`            | ![G6 Tile](src/markdown/projects/tiles/6/G6.svg){.inline-svg} | 0.3.0            |
-| `H6`            | ![H6 Tile](src/markdown/projects/tiles/6/H6.svg){.inline-svg} | 0.3.0            |
-| `I6`            | ![I6 Tile](src/markdown/projects/tiles/6/I6.svg){.inline-svg} | 0.3.0            |
-| `J6`            | ![J6 Tile](src/markdown/projects/tiles/6/J6.svg){.inline-svg} | 0.3.0            |
-| `K6`            | ![K6 Tile](src/markdown/projects/tiles/6/K6.svg){.inline-svg} | 0.3.0            |
-| `L6`            | ![L6 Tile](src/markdown/projects/tiles/6/L6.svg){.inline-svg} | 0.3.0            |
-| `M6`            | ![M6 Tile](src/markdown/projects/tiles/6/M6.svg){.inline-svg} | 0.3.0            |
-| `m6`            | ![m6 Tile](src/markdown/projects/tiles/6/m6.svg){.inline-svg} | 0.3.0            |
-| `N6`            | ![N6 Tile](src/markdown/projects/tiles/6/N6.svg){.inline-svg} | 0.3.0            |
-| `n6`            | ![n6 Tile](src/markdown/projects/tiles/6/n6.svg){.inline-svg} | 0.3.0            |
-| `O6`            | ![O6 Tile](src/markdown/projects/tiles/6/O6.svg){.inline-svg} | 0.3.0            |
-| `P6`            | ![P6 Tile](src/markdown/projects/tiles/6/P6.svg){.inline-svg} | 0.3.0            |
-| `p6`            | ![p6 Tile](src/markdown/projects/tiles/6/p6.svg){.inline-svg} | 0.3.0            |
-| `Q6`            | ![Q6 Tile](src/markdown/projects/tiles/6/Q6.svg){.inline-svg} | 0.3.0            |
-| `R6`            | ![R6 Tile](src/markdown/projects/tiles/6/R6.svg){.inline-svg} | 0.3.0            |
-| `S6`            | ![S6 Tile](src/markdown/projects/tiles/6/S6.svg){.inline-svg} | 0.3.0            |
-| `T6`            | ![T6 Tile](src/markdown/projects/tiles/6/T6.svg){.inline-svg} | 0.3.0            |
-| `t6`            | ![t6 Tile](src/markdown/projects/tiles/6/t6.svg){.inline-svg} | 0.3.0            |
-| `U6`            | ![U6 Tile](src/markdown/projects/tiles/6/U6.svg){.inline-svg} | 0.3.0            |
-| `u6`            | ![u6 Tile](src/markdown/projects/tiles/6/u6.svg){.inline-svg} | 0.3.0            |
-| `V6`            | ![V6 Tile](src/markdown/projects/tiles/6/V6.svg){.inline-svg} | 0.3.0            | 
-| `W6`            | ![W6 Tile](src/markdown/projects/tiles/6/W6.svg){.inline-svg} | 0.3.0            |
-| `w6`            | ![w6 Tile](src/markdown/projects/tiles/6/w6.svg){.inline-svg} | 0.3.0            |
-| `X6`            | ![X6 Tile](src/markdown/projects/tiles/6/X6.svg){.inline-svg} | 0.3.0            |
-| `x6`            | ![x6 Tile](src/markdown/projects/tiles/6/x6.svg){.inline-svg} | 0.3.0            |
-| `Y6`            | ![Y6 Tile](src/markdown/projects/tiles/6/Y6.svg){.inline-svg} | 0.3.0            |
-| `y6`            | ![y6 Tile](src/markdown/projects/tiles/6/y6.svg){.inline-svg} | 0.3.0            |
-| `Z6`            | ![Z6 Tile](src/markdown/projects/tiles/6/Z6.svg){.inline-svg} | 0.3.0            |
-| `z6`            | ![z6 Tile](src/markdown/projects/tiles/6/z6.svg){.inline-svg} | 0.3.0            |
+| Name            | Shape                                                                 | Required Version |
+|-----------------|-----------------------------------------------------------------------|------------------|
+| **Domino**      |                                                                       |                  |
+| `I2`            | ![I2 Tile](src/markdown/projects/puzzled/tiles/2/I2.svg){.inline-svg} |                  |
+| **Trominoes**   |                                                                       |                  |
+| `I3`            | ![I3 Tile](src/markdown/projects/puzzled/tiles/3/I3.svg){.inline-svg} |                  |
+| `L3`            | ![L3 Tile](src/markdown/projects/puzzled/tiles/3/L3.svg){.inline-svg} |                  |
+| **Tetrominoes** |                                                                       |                  |
+| `I4`            | ![I4 Tile](src/markdown/projects/puzzled/tiles/4/I4.svg){.inline-svg} |                  |
+| `J4`            | ![L4 Tile](src/markdown/projects/puzzled/tiles/4/J4.svg){.inline-svg} |                  |
+| `L4`            | ![L4 Tile](src/markdown/projects/puzzled/tiles/4/L4.svg){.inline-svg} |                  |
+| `O4`            | ![O4 Tile](src/markdown/projects/puzzled/tiles/4/O4.svg){.inline-svg} |                  |
+| `S4`            | ![S4 Tile](src/markdown/projects/puzzled/tiles/4/S4.svg){.inline-svg} |                  |
+| `T4`            | ![T4 Tile](src/markdown/projects/puzzled/tiles/4/T4.svg){.inline-svg} |                  |
+| `Z4`            | ![Z4 Tile](src/markdown/projects/puzzled/tiles/4/Z4.svg){.inline-svg} |                  |
+| **Pentominoes** |                                                                       |                  |
+| `F5`            | ![F5 Tile](src/markdown/projects/puzzled/tiles/5/F5.svg){.inline-svg} |                  |
+| `I5`            | ![I5 Tile](src/markdown/projects/puzzled/tiles/5/I5.svg){.inline-svg} |                  |
+| `L5`            | ![L5 Tile](src/markdown/projects/puzzled/tiles/5/L5.svg){.inline-svg} |                  |
+| `N5`            | ![N5 Tile](src/markdown/projects/puzzled/tiles/5/N5.svg){.inline-svg} |                  |
+| `P5`            | ![P5 Tile](src/markdown/projects/puzzled/tiles/5/P5.svg){.inline-svg} |                  |
+| `T5`            | ![T5 Tile](src/markdown/projects/puzzled/tiles/5/T5.svg){.inline-svg} |                  |
+| `U5`            | ![U5 Tile](src/markdown/projects/puzzled/tiles/5/U5.svg){.inline-svg} |                  |
+| `V5`            | ![V5 Tile](src/markdown/projects/puzzled/tiles/5/V5.svg){.inline-svg} |                  |
+| `W5`            | ![W5 Tile](src/markdown/projects/puzzled/tiles/5/W5.svg){.inline-svg} |                  |
+| `X5`            | ![X5 Tile](src/markdown/projects/puzzled/tiles/5/X5.svg){.inline-svg} |                  |
+| `Y5`            | ![Y5 Tile](src/markdown/projects/puzzled/tiles/5/Y5.svg){.inline-svg} |                  |
+| `Z5`            | ![I3 Tile](src/markdown/projects/puzzled/tiles/5/Z5.svg){.inline-svg} |                  |
+| **Hexominoes**  |                                                                       |                  |
+| `A6`            | ![A6 Tile](src/markdown/projects/puzzled/tiles/6/A6.svg){.inline-svg} | 0.3.0            |
+| `B6`            | ![B6 Tile](src/markdown/projects/puzzled/tiles/6/B6.svg){.inline-svg} | 0.3.0            |
+| `C6`            | ![C6 Tile](src/markdown/projects/puzzled/tiles/6/C6.svg){.inline-svg} | 0.3.0            |
+| `D6`            | ![D6 Tile](src/markdown/projects/puzzled/tiles/6/D6.svg){.inline-svg} | 0.3.0            |
+| `F6`            | ![F6 Tile](src/markdown/projects/puzzled/tiles/6/F6.svg){.inline-svg} | 0.3.0            |
+| `f6`            | ![f6 Tile](src/markdown/projects/puzzled/tiles/6/f6.svg){.inline-svg} | 0.3.0            |
+| `G6`            | ![G6 Tile](src/markdown/projects/puzzled/tiles/6/G6.svg){.inline-svg} | 0.3.0            |
+| `H6`            | ![H6 Tile](src/markdown/projects/puzzled/tiles/6/H6.svg){.inline-svg} | 0.3.0            |
+| `I6`            | ![I6 Tile](src/markdown/projects/puzzled/tiles/6/I6.svg){.inline-svg} | 0.3.0            |
+| `J6`            | ![J6 Tile](src/markdown/projects/puzzled/tiles/6/J6.svg){.inline-svg} | 0.3.0            |
+| `K6`            | ![K6 Tile](src/markdown/projects/puzzled/tiles/6/K6.svg){.inline-svg} | 0.3.0            |
+| `L6`            | ![L6 Tile](src/markdown/projects/puzzled/tiles/6/L6.svg){.inline-svg} | 0.3.0            |
+| `M6`            | ![M6 Tile](src/markdown/projects/puzzled/tiles/6/M6.svg){.inline-svg} | 0.3.0            |
+| `m6`            | ![m6 Tile](src/markdown/projects/puzzled/tiles/6/m6.svg){.inline-svg} | 0.3.0            |
+| `N6`            | ![N6 Tile](src/markdown/projects/puzzled/tiles/6/N6.svg){.inline-svg} | 0.3.0            |
+| `n6`            | ![n6 Tile](src/markdown/projects/puzzled/tiles/6/n6.svg){.inline-svg} | 0.3.0            |
+| `O6`            | ![O6 Tile](src/markdown/projects/puzzled/tiles/6/O6.svg){.inline-svg} | 0.3.0            |
+| `P6`            | ![P6 Tile](src/markdown/projects/puzzled/tiles/6/P6.svg){.inline-svg} | 0.3.0            |
+| `p6`            | ![p6 Tile](src/markdown/projects/puzzled/tiles/6/p6.svg){.inline-svg} | 0.3.0            |
+| `Q6`            | ![Q6 Tile](src/markdown/projects/puzzled/tiles/6/Q6.svg){.inline-svg} | 0.3.0            |
+| `R6`            | ![R6 Tile](src/markdown/projects/puzzled/tiles/6/R6.svg){.inline-svg} | 0.3.0            |
+| `S6`            | ![S6 Tile](src/markdown/projects/puzzled/tiles/6/S6.svg){.inline-svg} | 0.3.0            |
+| `T6`            | ![T6 Tile](src/markdown/projects/puzzled/tiles/6/T6.svg){.inline-svg} | 0.3.0            |
+| `t6`            | ![t6 Tile](src/markdown/projects/puzzled/tiles/6/t6.svg){.inline-svg} | 0.3.0            |
+| `U6`            | ![U6 Tile](src/markdown/projects/puzzled/tiles/6/U6.svg){.inline-svg} | 0.3.0            |
+| `u6`            | ![u6 Tile](src/markdown/projects/puzzled/tiles/6/u6.svg){.inline-svg} | 0.3.0            |
+| `V6`            | ![V6 Tile](src/markdown/projects/puzzled/tiles/6/V6.svg){.inline-svg} | 0.3.0            | 
+| `W6`            | ![W6 Tile](src/markdown/projects/puzzled/tiles/6/W6.svg){.inline-svg} | 0.3.0            |
+| `w6`            | ![w6 Tile](src/markdown/projects/puzzled/tiles/6/w6.svg){.inline-svg} | 0.3.0            |
+| `X6`            | ![X6 Tile](src/markdown/projects/puzzled/tiles/6/X6.svg){.inline-svg} | 0.3.0            |
+| `x6`            | ![x6 Tile](src/markdown/projects/puzzled/tiles/6/x6.svg){.inline-svg} | 0.3.0            |
+| `Y6`            | ![Y6 Tile](src/markdown/projects/puzzled/tiles/6/Y6.svg){.inline-svg} | 0.3.0            |
+| `y6`            | ![y6 Tile](src/markdown/projects/puzzled/tiles/6/y6.svg){.inline-svg} | 0.3.0            |
+| `Z6`            | ![Z6 Tile](src/markdown/projects/puzzled/tiles/6/Z6.svg){.inline-svg} | 0.3.0            |
+| `z6`            | ![z6 Tile](src/markdown/projects/puzzled/tiles/6/z6.svg){.inline-svg} | 0.3.0            |
 
 ### Array
 
