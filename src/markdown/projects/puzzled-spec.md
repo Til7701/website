@@ -1,0 +1,493 @@
+[Maintained here](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md)
+
+You can create your own puzzle collection by creating a JSON file with the following structure.
+Note that any behavior not explicitly described here is subject to change without prior notice or increased version
+number.
+If you want to add new features or define behavior not described here, please open an issue.
+Usually, when loading a malformed file, the application will show an error message and refuse to load the file.
+If it does not give an error message, when this specification suggests it should, please open an issue as well.
+
+<!-- @formatter:off -->
+```json
+{
+    "puzzled": "1.0.0",
+    "name": "Example Puzzle",
+    "author": "Puzzled",
+    "description": "Fill the board with trominoes.",
+    "custom_tiles": {
+        "looong": [
+            [1, 1, 1]
+        ]
+    },
+    "custom_boards": {
+        "3x3": {
+            "layout": [
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0]
+            ]
+        }
+    },
+    "puzzles": [
+        {
+            "name": "Simple",
+            "tiles": [
+                "looong",
+                "L3",
+                [
+                    [1, 1],
+                    [0, 1]
+                ]
+            ],
+            "board": "3x3"
+        }
+    ]
+}
+```
+<!-- @formatter:on -->
+
+This file can be loaded by Puzzled to add a new puzzle collection for the user to solve.
+The fields have the following meaning:
+
+| Field                | Type                 | Required | Description                                                                                                                                                                                                                                                                            | Default   | Version |
+|----------------------|----------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|---------|
+| puzzled              | `String`             | true     | The version of Puzzled this collection is made for. If you try to load a collection into Puzzled which is made for a newer versin of Puzzled, the load operation will fail.                                                                                                            | -         | 0.2.0   |
+| name                 | `String`             | true     | The name of the puzzle collection. MUST not be blank. The name SHOULD be short (5 to 20 characters) and not contain the word `Collection`.                                                                                                                                             | -         | 0.2.0   |
+| author               | `String`             | true     | The author of the puzzle collection. MUST not be blank.                                                                                                                                                                                                                                | -         | 0.2.0   |
+| id                   | `String`             | true     | An id to identify the collection. It MUST be in the reverse domain name format like: `tld.vendor.Author.Collection`. So it might look like `de.til7701.Puzzled.PuzzleADay`. Only the characters matching `[a-z][A-Z][0-9]-` are allowed in between the dots. The id is case sensitive. | -         | 0.2.0   |
+| allow_board_rotation | `Boolean`            | false    | Flag to define whether the boards in this collection may be rotated in a way deemed most suitable by the application. You may want to disable the rotation for boards that represent a certain shape and do have a "correct" orientiation.                                             | true      | 0.2.0   |
+| version              | `String`             | false    | The version of the collection set by the author. This may be any string. This is not checked, it is just displayed to the user.                                                                                                                                                        | -         | 0.2.0   |
+| description          | `String`             | false    | A short description of the puzzle collection. MUST not be blank if specified.                                                                                                                                                                                                          | None      | 0.2.0   |
+| progression          | `Progression`        | false    | The progression settings for this collection. See [Progression](#progression) for details.                                                                                                                                                                                             | Any       | 0.3.0   |
+| preview              | `Preview`            | false    | Can be used to not show previews of locked puzzles. (See Progression)                                                                                                                                                                                                                  | Any       | 0.3.0   |
+| custom_tiles         | `Map<String, Tile>`  | false    | A map of custom tile definitions to reuse in this file. See [Custom Tiles](#custom-tiles) for details.                                                                                                                                                                                 | Empty Map | 0.2.0   |
+| custom_boards        | `Map<String, Board>` | false    | A map of custom board definitions to reuse in this file. See [Custom Boards](#custom-boards) for details.                                                                                                                                                                              | Empty Map | 0.2.0   |
+| puzzles              | `List<Puzzle>`       | true     | The list of puzzles in this collection. See [Puzzles](#puzzles) for details. The order of puzzles in this list SHOULD not change since it MAY be used by Puzzled to bind data to it. When adding a new puzzle to a collection, add it at the end of the list.                          | -         | 0.2.0   |
+
+## Custom Tiles
+
+Custom tiles can be used to define tiles that are not part of the standard tile set.
+They can then be referenced in the `tiles` field of a puzzle by their name.
+The value of each entry in the `custom_tiles` map is a tile definition, which is explained in the [Tiles](#tiles)
+section below.
+You can also override standard tiles by defining a custom tile with the same name.
+Standard tiles are shown below.
+
+## Custom Boards
+
+Custom boards can be used to define boards that you want to reuse in multiple puzzles.
+They can then be referenced in the `board` field of a puzzle by their name.
+The value of each entry in the `custom_boards` map is a board definition, which is explained in the [Board](#board)
+section below.
+
+## Puzzles
+
+A puzzle describes a single challenge for the user to solve.
+It has the following fields:
+
+| Field           | Type                  | Required | Description                                                                                                                                                                                                 | Default                               |
+|-----------------|-----------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| name            | `String`              | true     | The name of the puzzle. MUST not be blank.                                                                                                                                                                  | -                                     |
+| id              | `String`              | false    | The id of the puzzle to identify it in case the order of puzzles in a collection changes or new ones are added in between. This defaults to the zero-based index of the puzzle in the collection.           | Index of the puzzle in the collection |
+| description     | `String`              | false    | A short description of the puzzle. MUST not be blank if specified.                                                                                                                                          | None                                  |
+| difficulty      | `Difficulty`          | false    | The difficulty of the puzzle. If provided, it MUST be one of: `Easy`, `Medium`, `Hard` or `Expert`.                                                                                                         | None                                  |
+| unsolvable      | `Boolean`             | false    | If set to `true`, the puzzle is marked as unsolvable and does not count towards solving all puzzles in the collection.                                                                                      | false                                 |
+| tiles           | `List<Tile>`          | true     | The list of tiles available to solve the puzzle. This list MUST not be empty.                                                                                                                               | -                                     |
+| board           | `Board`               | true     | The board to solve the puzzle on. See below for details.                                                                                                                                                    | -                                     |   
+| additional_info | `Map<String, String>` | false    | Additional information about the puzzle. This may contain statistics about how many solutions there are, or anything else, which is in a key-value format and does not feel right to be in the description. | Empty Map                             |   
+
+## Tiles
+
+A tile defines a shape that can be placed on the board.
+Tiles can be defined in three ways: by name, with an array or as a more complex custom object.
+
+### Name
+
+A tile can be referenced by its name as a `String`.
+Those tiles are either standard tiles (see below) or custom tiles defined in the `custom_tiles` map.
+
+Example:
+
+```json
+"L3"
+```
+
+The following standard tiles are available:
+
+| Name            | Shape                                                         | Required Version |
+|-----------------|---------------------------------------------------------------|------------------|
+| **Domino**      |                                                               |                  |
+| `I2`            | ![I2 Tile](src/markdown/projects/tiles/2/I2.svg){.inline-svg} |                  |
+| **Trominoes**   |                                                               |                  |
+| `I3`            | ![I3 Tile](src/markdown/projects/tiles/3/I3.svg){.inline-svg} |                  |
+| `L3`            | ![L3 Tile](src/markdown/projects/tiles/3/L3.svg){.inline-svg} |                  |
+| **Tetrominoes** |                                                               |                  |
+| `I4`            | ![I4 Tile](src/markdown/projects/tiles/4/I4.svg){.inline-svg} |                  |
+| `J4`            | ![L4 Tile](src/markdown/projects/tiles/4/J4.svg){.inline-svg} |                  |
+| `L4`            | ![L4 Tile](src/markdown/projects/tiles/4/L4.svg){.inline-svg} |                  |
+| `O4`            | ![O4 Tile](src/markdown/projects/tiles/4/O4.svg){.inline-svg} |                  |
+| `S4`            | ![S4 Tile](src/markdown/projects/tiles/4/S4.svg){.inline-svg} |                  |
+| `T4`            | ![T4 Tile](src/markdown/projects/tiles/4/T4.svg){.inline-svg} |                  |
+| `Z4`            | ![Z4 Tile](src/markdown/projects/tiles/4/Z4.svg){.inline-svg} |                  |
+| **Pentominoes** |                                                               |                  |
+| `F5`            | ![F5 Tile](src/markdown/projects/tiles/5/F5.svg){.inline-svg} |                  |
+| `I5`            | ![I5 Tile](src/markdown/projects/tiles/5/I5.svg){.inline-svg} |                  |
+| `L5`            | ![L5 Tile](src/markdown/projects/tiles/5/L5.svg){.inline-svg} |                  |
+| `N5`            | ![N5 Tile](src/markdown/projects/tiles/5/N5.svg){.inline-svg} |                  |
+| `P5`            | ![P5 Tile](src/markdown/projects/tiles/5/P5.svg){.inline-svg} |                  |
+| `T5`            | ![T5 Tile](src/markdown/projects/tiles/5/T5.svg){.inline-svg} |                  |
+| `U5`            | ![U5 Tile](src/markdown/projects/tiles/5/U5.svg){.inline-svg} |                  |
+| `V5`            | ![V5 Tile](src/markdown/projects/tiles/5/V5.svg){.inline-svg} |                  |
+| `W5`            | ![W5 Tile](src/markdown/projects/tiles/5/W5.svg){.inline-svg} |                  |
+| `X5`            | ![X5 Tile](src/markdown/projects/tiles/5/X5.svg){.inline-svg} |                  |
+| `Y5`            | ![Y5 Tile](src/markdown/projects/tiles/5/Y5.svg){.inline-svg} |                  |
+| `Z5`            | ![I3 Tile](src/markdown/projects/tiles/5/Z5.svg){.inline-svg} |                  |
+| **Hexominoes**  |                                                               |                  |
+| `A6`            | ![A6 Tile](src/markdown/projects/tiles/6/A6.svg){.inline-svg} | 0.3.0            |
+| `B6`            | ![B6 Tile](src/markdown/projects/tiles/6/B6.svg){.inline-svg} | 0.3.0            |
+| `C6`            | ![C6 Tile](src/markdown/projects/tiles/6/C6.svg){.inline-svg} | 0.3.0            |
+| `D6`            | ![D6 Tile](src/markdown/projects/tiles/6/D6.svg){.inline-svg} | 0.3.0            |
+| `F6`            | ![F6 Tile](src/markdown/projects/tiles/6/F6.svg){.inline-svg} | 0.3.0            |
+| `f6`            | ![f6 Tile](src/markdown/projects/tiles/6/f6.svg){.inline-svg} | 0.3.0            |
+| `G6`            | ![G6 Tile](src/markdown/projects/tiles/6/G6.svg){.inline-svg} | 0.3.0            |
+| `H6`            | ![H6 Tile](src/markdown/projects/tiles/6/H6.svg){.inline-svg} | 0.3.0            |
+| `I6`            | ![I6 Tile](src/markdown/projects/tiles/6/I6.svg){.inline-svg} | 0.3.0            |
+| `J6`            | ![J6 Tile](src/markdown/projects/tiles/6/J6.svg){.inline-svg} | 0.3.0            |
+| `K6`            | ![K6 Tile](src/markdown/projects/tiles/6/K6.svg){.inline-svg} | 0.3.0            |
+| `L6`            | ![L6 Tile](src/markdown/projects/tiles/6/L6.svg){.inline-svg} | 0.3.0            |
+| `M6`            | ![M6 Tile](src/markdown/projects/tiles/6/M6.svg){.inline-svg} | 0.3.0            |
+| `m6`            | ![m6 Tile](src/markdown/projects/tiles/6/m6.svg){.inline-svg} | 0.3.0            |
+| `N6`            | ![N6 Tile](src/markdown/projects/tiles/6/N6.svg){.inline-svg} | 0.3.0            |
+| `n6`            | ![n6 Tile](src/markdown/projects/tiles/6/n6.svg){.inline-svg} | 0.3.0            |
+| `O6`            | ![O6 Tile](src/markdown/projects/tiles/6/O6.svg){.inline-svg} | 0.3.0            |
+| `P6`            | ![P6 Tile](src/markdown/projects/tiles/6/P6.svg){.inline-svg} | 0.3.0            |
+| `p6`            | ![p6 Tile](src/markdown/projects/tiles/6/p6.svg){.inline-svg} | 0.3.0            |
+| `Q6`            | ![Q6 Tile](src/markdown/projects/tiles/6/Q6.svg){.inline-svg} | 0.3.0            |
+| `R6`            | ![R6 Tile](src/markdown/projects/tiles/6/R6.svg){.inline-svg} | 0.3.0            |
+| `S6`            | ![S6 Tile](src/markdown/projects/tiles/6/S6.svg){.inline-svg} | 0.3.0            |
+| `T6`            | ![T6 Tile](src/markdown/projects/tiles/6/T6.svg){.inline-svg} | 0.3.0            |
+| `t6`            | ![t6 Tile](src/markdown/projects/tiles/6/t6.svg){.inline-svg} | 0.3.0            |
+| `U6`            | ![U6 Tile](src/markdown/projects/tiles/6/U6.svg){.inline-svg} | 0.3.0            |
+| `u6`            | ![u6 Tile](src/markdown/projects/tiles/6/u6.svg){.inline-svg} | 0.3.0            |
+| `V6`            | ![V6 Tile](src/markdown/projects/tiles/6/V6.svg){.inline-svg} | 0.3.0            | 
+| `W6`            | ![W6 Tile](src/markdown/projects/tiles/6/W6.svg){.inline-svg} | 0.3.0            |
+| `w6`            | ![w6 Tile](src/markdown/projects/tiles/6/w6.svg){.inline-svg} | 0.3.0            |
+| `X6`            | ![X6 Tile](src/markdown/projects/tiles/6/X6.svg){.inline-svg} | 0.3.0            |
+| `x6`            | ![x6 Tile](src/markdown/projects/tiles/6/x6.svg){.inline-svg} | 0.3.0            |
+| `Y6`            | ![Y6 Tile](src/markdown/projects/tiles/6/Y6.svg){.inline-svg} | 0.3.0            |
+| `y6`            | ![y6 Tile](src/markdown/projects/tiles/6/y6.svg){.inline-svg} | 0.3.0            |
+| `Z6`            | ![Z6 Tile](src/markdown/projects/tiles/6/Z6.svg){.inline-svg} | 0.3.0            |
+| `z6`            | ![z6 Tile](src/markdown/projects/tiles/6/z6.svg){.inline-svg} | 0.3.0            |
+
+### Array
+
+A tile can also be defined by a 2D array of integers.
+The array represents the shape of the tile, where `1` indicates a filled cell and `0` indicates an empty cell.
+
+For example, the following array defines a Z5 tile:
+
+<!-- @formatter:off -->
+```json
+[
+    [1, 1, 0],
+    [0, 1, 0],
+    [0, 1, 1]
+]
+```
+<!-- @formatter:on -->
+
+Which, as a reminder, looks like this:
+
+<img alt="Z5 Tile" src="tiles/5/Z5.svg" height="100"/>
+
+### Custom Object
+
+Some more extensive tiles need more information than just the shape, so they can be defined as an object with additional
+fields.
+This looks like this:
+
+<!-- @formatter:off -->
+```json
+{
+    "layout": [
+        [1, 1, 0],
+        [0, 1, 0],
+        [0, 1, 1]
+    ],
+    "color": "#AABBCC",
+    "count": 2
+}
+```
+<!-- @formatter:on -->
+
+The layout must be defined as described in the name or array section above, but additional fields can be added to define
+additional properties of the tile, like its color.
+
+| Field  | Type         | Required | Description                                                                                                                                                                                                                                                                                                                                                                                       | Default   | Version |
+|--------|--------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|---------|
+| layout | `Array2<u8>` | true     | The layout of the tile where `1` indicates a filled cell and `0` indicates an empty cell.                                                                                                                                                                                                                                                                                                         | -         |         |
+| color  | `String`     | false    | The color of the tile. It must start with a `#` and continues with a hex representation of the color in the order red, green and blue. You may also add the alpha channel. However, this is not recommended, since transparency is reserved for other purposes. You should also keep in mind that people are playing in light or dark mode. So choose colors that can be seen well in both modes. | -         |         |
+| count  | `NonZeroU32` | false    | How many of the tiles should be added. MUST not be zero or lower.                                                                                                                                                                                                                                                                                                                                 | -         | 0.4.0   |
+
+## Board
+
+A board defines the layout on which the puzzle is to be solved.
+There are two variants of boards, which can be defined in three ways, so pay attention.
+Boards can be referenced by name, defined as a [Simple Board](#simple-board) or as an [Area Board](#area-board).
+
+### Name
+
+Similar to tiles, a board can be referenced by its name as a `String`.
+Standard boards or custom boards defined in the `custom_boards` map can be referenced this way.
+
+Example:
+
+```json
+"my_custom_board"
+```
+
+The following format of standard boards are available:
+
+You can define a simple rectangular board of any size using the following naming scheme:
+`<width>x<height>`, where `<width>` and `<height>` are positive integers.
+The following board definitions will result in the same board:
+
+```json
+"4x3"
+```
+
+<!-- @formatter:off -->
+```json
+{
+    "layout": [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ]
+}
+```
+<!-- @formatter:on -->
+
+### Simple Board
+
+A simple board is defined by a 2D array of integers, where `0` indicates an empty cell where a tile can be placed and
+`1` indicates a blocked cell where no tile can be placed.
+
+| Field  | Type         | Required | Description                                                                              | Default   |
+|--------|--------------|----------|------------------------------------------------------------------------------------------|-----------|
+| layout | `Array2<u8>` | true     | The layout of the board where `0` indicates empty cells and `1` indicates blocked cells. | -         |
+
+Example:
+
+<!-- @formatter:off -->
+```json
+{
+    "layout": [
+        [0, 0, 0],
+        [0, 1, 0],
+        [0, 0, 0]
+    ]
+}
+```
+<!-- @formatter:on -->
+
+Here, tiles can be placed in all cells except the one in the center.
+
+### Area Board
+
+An area board is a board, where one cell has to be left empty in each area when solving the puzzle.
+This is the board type used in the original Puzzle A Day.
+
+| Field           | Type             | Required | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Default |
+|-----------------|------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
+| area_layout     | `Array2<i32>`    | true     | The layout of the areas on the board. `-1` indicates, that no tile can be placed in this cell. The rest is the index of the area the cell belongs to. The index starts at `0` and goes up to the length of the areas list minus one.                                                                                                                                                                                                                                                                                                    | -       |
+| values          | `Array2<String>` | true     | The values to show in each cell. Entries MUST not be empty, when the area_layout is not `-1` in the corresponding cell.                                                                                                                                                                                                                                                                                                                                                                                                                 | -       |
+| value_order     | `Array2<i32>`    | true     | The order of values. This order is used to sort the options when selecting a target. `-1` marks cells that no tile can be placed in. The rest of the values MUST be any non-negative number and MAY not start at zero and MAY not be consecutive. The natural order of the number is the only thing that matters. If the same number appears more than once in an area, the behavior is undefined.                                                                                                                                      | -       |
+| areas           | `List<Area>`     | true     | The list of [Areas](#area) in this board. The index of the area in this board is the same as the index for the area in the area_layout array.                                                                                                                                                                                                                                                                                                                                                                                           | -       |
+| target_template | `String`         | true     | Template to format a target selected by the user. This is shown to inform the user about the currently selected target. The formatters defined in the area are used to format the value from the board values array. In the template, `{<area_index>}` is replaced with the formatted value. So `{0} and {1}` is a template for a baord with two areas. The resulting string may look like this: `first and second`, where `first` is the formatted value from the first area and `second` is the formatted vlaue from the second area. | -       |
+
+Example:
+
+<!-- @formatter:off -->
+```json
+{
+    "area_layout": [
+        [0, 0, 0, -1],
+        [-1, 1, 1, 1]
+    ],
+    "values": [
+        ["A", "B", "C", ""],
+        ["", "D", "E", "F"]
+    ],
+    "value_order": [
+        [0, 1, 2, -1],
+        [-1, 0, 1, 2]
+    ],
+    "areas": [...],
+    "target_template": "{0} and {1}"
+}
+```
+<!-- @formatter:on -->
+
+#### Area
+
+The area gives additional information about an area on an area board.
+
+| Field           | Type             | Required | Description                                                                                                                                                                                                                                                           | Default   |
+|-----------------|------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| name            | `String`         | true     | The name of the area to show in the target selection dialog.                                                                                                                                                                                                          | -         |
+| formatter       | `AreaFormatter`  | true     | The [formatter](#area-formatter) that defines, how to format a value for this area.                                                                                                                                                                                   | -         |
+| default_factory | `DefaultFactory` | true     | The [default factory](#default-factory) that defines how to generate the default target for this area. The factory MUST produce a value that is equal to a value on the board. The cell where the values match, is supposed to be left empty when solving the puzzle. | -         |
+
+Example:
+
+```json
+{
+    "name": "Day",
+    "formatter": {
+        "type": "Nth"
+    },
+    "default_factory": {
+        "type": "CurrentDay"
+    }
+}
+```
+
+#### Area Formatter
+
+The area formatter takes the raw value from the board and formats it for display to the user.
+
+##### Plain
+
+Returns the value as is.
+
+```json
+{
+    "type": "PLain"
+}
+```
+
+##### Nth
+
+Appends "st", "nd", "rd" or "th" to the value based on its last character.
+It is expected that the value ends with a digit.
+
+```json
+{
+    "type": "Nth"
+}
+```
+
+##### PrefixSuffix
+
+Appends a prefix and/or suffix to the value.
+
+```json
+{
+    "type": "PrefixSuffix",
+    "prefix": "x",
+    "suffix": "z"
+}
+```
+
+#### Default Factory
+
+The default factory generates the default target for an area.
+The product of the default factory MUST be equal to a value on the board in the area the factory is used for.
+
+##### Fixed
+
+Returns a fixed value.
+
+```json
+{
+    "type": "Fixed",
+    "value": "example"
+}
+```
+
+##### CurrentDay
+
+Returns the current day of the month as a string.
+
+```json
+{
+    "type": "CurrentDay"
+}
+```
+
+##### CurrentMonthShort
+
+Returns the current month as a three-letter abbreviation.
+E.g., "Jan" for January, "Feb" for February, etc.
+
+```json
+{
+    "type": "CurrentMonthShort"
+}
+```
+
+##### CurrentYear2FirstDigit
+
+Returns the first digit of the current 2-digit-year as a string.
+E.g., "2" for the year 26.
+
+```json
+{
+    "type": "CurrentYear2FirstDigit"
+}
+```
+
+##### CurrentYear2SecondDigit
+
+Returns the second digit of the current 2-digit-year as a string.
+E.g., "6" for the year 26.
+
+```json
+{
+    "type": "CurrentYear2SecondDigit"
+}
+```
+
+## Progression
+
+The progression field defines how puzzles in this collection are unlocked for the user.
+This field is available since version `0.3.0` of Puzzled.
+
+Example:
+
+```json
+{
+    "type": "Any"
+}
+```
+
+The following progression types are available:
+
+| Type       | Description                                                                                                                      |
+|------------|----------------------------------------------------------------------------------------------------------------------------------|
+| Any        | All puzzles are available from the start.                                                                                        |
+| Sequential | Puzzles are unlocked one by one in the order they are defined in the puzzles list. The first puzzle is available from the start. |
+
+## Preview
+
+The preview field defines whether to show previews of locked puzzles.
+This field is available since version `0.3.0` of Puzzled.
+
+Example:
+
+```json
+{
+    "show_board": true,
+    "show_tiles": false,
+    "show_tile_count": false,
+    "show_board_size": false
+}
+```
+
+| Type            | Description     | Default |
+|-----------------|-----------------|---------|
+| show_board      | Show Board      | true    |
+| show_tiles      | Show Tiles      | true    |
+| show_tile_count | Show Tile count | true    |
+| show_board_size | Show Board size | true    |

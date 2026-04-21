@@ -1,0 +1,27 @@
+div.sourceCode {
+    .dt {
+        color: var(--accent-color);
+    }
+
+    --kw-color: #EA850B;
+    --dv-color: #00E0E0;
+    --st-color: #10D070;
+
+    @media (prefers-color-scheme: light) {
+        --kw-color: #AE630B;
+        --dv-color: #009090;
+        --st-color: #109030;
+    }
+
+    .kw {
+        color: var(--kw-color);
+    }
+
+    .dv {
+        color: var(--dv-color);
+    }
+
+    .st {
+        color: var(--st-color);
+    }
+}

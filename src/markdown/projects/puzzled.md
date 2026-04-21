@@ -1,4 +1,4 @@
-[Source Code (GitHub)](https://github.com/Til7701/Puzzled)
+[Source Code (GitHub)](https://github.com/Til7701/Puzzled) | [Collection Spec](/projects/puzzled-spec)
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application for Linux to solve polyform puzzles in
 various formats.
@@ -22,7 +22,7 @@ user-friendly interface.
 You can solve any Polyomino puzzle with Puzzled, as long as you can provide the layout in the correct format.
 You can create your own puzzle layouts and load them into the application.
 In order for Puzzled to import the layouts, you have to create a JSON file following the specification defined
-[here](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md).
+[here](/projects/puzzled-spec).
 If you have any problems with creating your own collection, feel free to open an issue on GitHub.
 
 ## Installation
@@ -90,7 +90,6 @@ flatpak install flathub de.til7701.Puzzled
 - Instead of getting solvability-feedback every time you move a tile, you now have to request a
   hint. This hint either shows a transparent tile where one should be placed or tells you that the
   puzzle cannot be solved with the current approach.
-
 - Solved puzzles are now marked as such.
 - You can now jump directly to the next puzzle in the collection after finding a solution.
 - Collections can now declare, that the puzzles should be solved in a linear order.

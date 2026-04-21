@@ -112,6 +112,13 @@ class HardcodedPostDAO implements PostDAO
                         css: ["code-blocks", "code-blocks-bash"],
                         js: ["code-block-copy"],
                     ),
+                    new Post("/projects/puzzled-spec",
+                        "Puzzled Collection Spec",
+                        "from-markdown/projects/puzzled-spec.html",
+                        css: ["polyomino", "tables", "code-blocks", "code-blocks-json"],
+                        js: ["code-block-copy"],
+                        showInNav: false
+                    ),
                     new PostGroup("/projects/schlunzis",
                         "schlunzis",
                         "from-markdown/projects/schlunzis.html",
