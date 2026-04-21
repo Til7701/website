@@ -25,6 +25,14 @@ In order for Puzzled to import the layouts, you have to create a JSON file follo
 [here](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md).
 If you have any problems with creating your own collection, feel free to open an issue on GitHub.
 
+## Installation
+
+Puzzled is available on [Flathub](https://flathub.org/en/apps/de.til7701.Puzzled). You can install it by running:
+
+```bash
+flatpak install flathub de.til7701.Puzzled
+```
+
 ## Releases
 
 [Install from Flathub](https://flathub.org/en/apps/de.til7701.Puzzled) | [GitHub Releases](https://github.com/Til7701/Puzzled/releases)

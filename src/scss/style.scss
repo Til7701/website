@@ -5,10 +5,10 @@
 
 :root {
     --background-color: #121212;
-    --header-background-color: #222222;
+    --secondary-background-color: #222222;
     --border-color: #444;
     --text-color: #EEEEEE;
-    --footer-text-color: #999999;
+    --dimmed-text-color: #A0A0A0;
 
     --header-height: 4rem;
     --border-radius: 0.33rem;
@@ -17,10 +17,10 @@
 
     @media (prefers-color-scheme: light) {
         --background-color: #EEEEEE;
-        --header-background-color: #E9E9E9;
+        --secondary-background-color: #E5E5E5;
         --border-color: #AAA;
         --text-color: #222222;
-        --footer-text-color: #555555;
+        --dimmed-text-color: #555555;
     }
 
     @font-face {
@@ -121,5 +121,5 @@ a[href^="http"]::after {
 }
 
 figcaption {
-    color: var(--footer-text-color);
+    color: var(--dimmed-text-color);
 }

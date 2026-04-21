@@ -109,6 +109,8 @@ class HardcodedPostDAO implements PostDAO
                     new Post("/projects/puzzled",
                         "Puzzled",
                         "from-markdown/projects/puzzled.html",
+                        css: ["code-blocks", "code-blocks-bash"],
+                        js: ["code-block-copy"],
                     ),
                     new PostGroup("/projects/schlunzis",
                         "schlunzis",

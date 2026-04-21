@@ -14,5 +14,5 @@ This interest started early, when by dad showed me C# and tasked me to create si
 Since then, I have worked on various projects, both personal and academic, and have gained experience in different
 programming languages and frameworks.
 I used C# a bit more in school, but left it behind when I started my studies.
-Most of my projects are now using Java and the Spring Boot framework, if applicable, but I also tried out other
-languages like Rust, PHP, Python, and JavaScript.
+Most of my projects are now using Java and the Spring Boot framework, if applicable, or Rust. I also tried out other
+languages like PHP, Python, and JavaScript.
