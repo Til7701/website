@@ -2,7 +2,7 @@
 
 set -e
 
-width=400
+width=800
 height=20
 factor=1
 

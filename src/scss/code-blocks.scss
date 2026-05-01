@@ -7,29 +7,33 @@
         src: url(/assets/fonts/adwaita/mono/AdwaitaMono-Regular.ttf);
         font-style: normal;
         font-weight: normal;
+        font-display: swap;
     }
     @font-face {
         font-family: Adwaita-Mono;
         src: url(/assets/fonts/adwaita/mono/AdwaitaMono-Italic.ttf);
         font-style: italic;
         font-weight: normal;
+        font-display: swap;
     }
     @font-face {
         font-family: Adwaita-Mono;
         src: url(/assets/fonts/adwaita/mono/AdwaitaMono-Bold.ttf);
         font-style: normal;
         font-weight: bold;
+        font-display: swap;
     }
     @font-face {
         font-family: Adwaita-Mono;
         src: url(/assets/fonts/adwaita/mono/AdwaitaMono-BoldItalic.ttf);
         font-style: italic;
         font-weight: bold;
+        font-display: swap;
     }
 }
 
 code {
-    font-family: Adwaita-Mono;
+    font-family: Adwaita-Mono, monospace;
     hyphens: manual;
     white-space: pre-wrap;
     background-color: var(--code-background-color);

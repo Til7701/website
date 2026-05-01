@@ -27,17 +27,19 @@
         font-family: Adwaita-Sans;
         src: url(/assets/fonts/adwaita/sans/AdwaitaSans-Regular.ttf);
         font-style: normal;
+        font-display: swap;
     }
     @font-face {
         font-family: Adwaita-Sans;
         src: url(/assets/fonts/adwaita/sans/AdwaitaSans-Italic.ttf);
         font-style: italic;
+        font-display: swap;
     }
 }
 
 body {
     margin: 0;
-    font-family: Adwaita-Sans;
+    font-family: Adwaita-Sans, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     display: grid;
