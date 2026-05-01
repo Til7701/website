@@ -2,6 +2,7 @@
 
 namespace view;
 
+use model\additionalData\AdditionalData;
 use model\NavEntry;
 
 class View
@@ -13,6 +14,7 @@ class View
     private string $title = "Til7701";
     private array $cssFiles = array();
     private array $jsFiles = array();
+    private ?AdditionalData $additionalData;
 
     public function setTemplates($templates): View
     {
@@ -50,6 +52,12 @@ class View
         return $this;
     }
 
+    public function setAdditionalData(?AdditionalData $additionalData): View
+    {
+        $this->additionalData = $additionalData;
+        return $this;
+    }
+
     public function render(): string
     {
         # store in local variables for easier access
@@ -59,6 +67,7 @@ class View
         $title = $this->title;
         $css_files = $this->cssFiles;
         $js_files = $this->jsFiles;
+        $data = $this->additionalData;
 
 
         $html = Head::create($title, $css_files, $js_files);

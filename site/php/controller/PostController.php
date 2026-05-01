@@ -4,6 +4,7 @@ namespace controller;
 
 use dao\PostDAO;
 use dao\PostDAOFactory;
+use model\additionalData\AdditionalData;
 use model\Post;
 use view\View;
 
@@ -12,11 +13,13 @@ class PostController
 
     private PostDAO $postDAO;
     private string $path;
+    private ?AdditionalData $additionalData;
 
-    public function __construct(string $path)
+    public function __construct(string $path, ?AdditionalData $additionalData)
     {
         $this->path = $path;
         $this->postDAO = PostDAOFactory::create();
+        $this->additionalData = $additionalData;
     }
 
     public function work(): string
@@ -35,7 +38,8 @@ class PostController
                 ->setTemplates(array("navigation.php", $currentPost->getTemplate()))
                 ->setTitle($currentPost->getTitle())
                 ->setCss($css)
-                ->setJs($currentPost->getJs());
+                ->setJs($currentPost->getJs())
+                ->setAdditionalData($this->additionalData);
         } else {
             http_response_code(404);
             $view = (new View())

@@ -146,9 +146,9 @@ class HardcodedPostDAO implements PostDAO
             new Separator(),
             new Post("/about-you",
                 "About You",
-                "from-markdown/about-you.php",
-                css: [],
-                showInNav: false,
+                "about-you.php",
+                css: ["tables"],
+                showInNav: true,
                 showToC: false
             ),
             new Post("/api-docs",
