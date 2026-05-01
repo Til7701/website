@@ -40,7 +40,7 @@ jobs:
         run: scripts/build-info.sh
 
       - name: Copy License
-        run: cp LICENSE site/
+        run: cp GPL3-LICENSE site/
 
       - name: Deploy to Server
         run: |

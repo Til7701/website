@@ -21,8 +21,6 @@
         echo $versionString;
         ?>
         <br>
-        &copy;2026 Tilman Holube,
-        <br>
-        licensed under <a href="/LICENSE">GPL-3.0</a>
+        &copy;2026 Tilman Holube, all rights reserved
     </p>
 </footer>
