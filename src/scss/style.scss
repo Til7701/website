@@ -123,3 +123,15 @@ a[href^="http"]::after {
 figcaption {
     color: var(--dimmed-text-color);
 }
+
+blockquote {
+    border-left: var(--border-color) solid 0.5rem;
+    margin: 0 10%;
+    padding: 0.5rem;
+    background: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+
+    p {
+        margin: 0 0.5rem;
+    }
+}

@@ -1,5 +1,5 @@
-Licensed under the <a href="/GPL3-LICENSE">GPL-3.0</a>
-[Maintained alongside Puzzled on GitHub](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md)
+> Licensed under the <a href="/GPL3-LICENSE">GPL-3.0</a>
+> Maintained alongside Puzzled on [GitHub](https://github.com/Til7701/Puzzled/blob/main/docs/puzzle-collection-spec.md)
 
 You can create your own puzzle collection by creating a JSON file with the following structure.
 Note that any behavior not explicitly described here is subject to change without prior notice or increased version

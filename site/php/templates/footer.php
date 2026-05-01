@@ -21,6 +21,6 @@
         echo $versionString;
         ?>
         <br>
-        &copy;2026 Tilman Holube, all rights reserved
+        &copy;2026 Tilman Holube, licensed under <a href="/LICENSE">CC0</a>
     </p>
 </footer>

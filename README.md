@@ -19,3 +19,15 @@ To update the Swagger UI, download the latest version from https://github.com/sw
 
 Then copy the contents of the `dist` folder into the `site/api/v1/swagger-ui` folder in this repository.
 Then revert changes in `swagger-initializer.js` to keep the customizations.
+
+## License
+
+The following files are licensed under the Apache-2.0 License:
+
+- `site/api/v1/swagger-ui/*`
+
+The following files are licensed under the GPL-3.0 License:
+
+- `src/markdown/projects/puzzled/collection-spec.md`
+
+The rest is licensed under the CC0-1.0 License. See the LICENSE file for more details.

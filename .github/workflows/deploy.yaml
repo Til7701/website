@@ -39,8 +39,10 @@ jobs:
       - name: Create Build Info
         run: scripts/build-info.sh
 
-      - name: Copy License
-        run: cp GPL3-LICENSE site/
+      - name: Copy Licenses
+        run: |
+          cp LICENSE site/
+          cp LICENSE-GPL3 site/
 
       - name: Deploy to Server
         run: |
