@@ -4,3 +4,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteCond %{REQUEST_URI} !^/api/v1/swagger-ui/
 RewriteRule ^(.*)$ $1.php
+
+Header set Cache-Control "max-age=0, private, no-cache, no-store, must-revalidate"
