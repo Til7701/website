@@ -28,7 +28,7 @@ header {
     .nav-button {
         display: none;
         font-size: 2rem;
-        margin-right: 1rem;
+        margin-right: 0.5rem;
         z-index: 2;
 
         @media (max-width: 768px) {
@@ -62,6 +62,6 @@ header {
     }
 
     @media (max-width: 768px) {
-        padding-left: 1rem;
+        padding-left: 0.5rem;
     }
 }
