@@ -29,5 +29,6 @@ The following files are licensed under the Apache-2.0 License:
 The following files are licensed under the GPL-3.0 License:
 
 - `src/markdown/projects/puzzled/collection-spec.md`
+- `site/assets/icons/de.til7701.Puzzled.svg`
 
 The rest is licensed under the CC0-1.0 License. See the LICENSE file for more details.

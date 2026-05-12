@@ -1,3 +1,5 @@
+![](/assets/icons/de.til7701.Puzzled.svg){data-external="1" width=20% alt="Icon"}
+
 [Source Code (GitHub)](https://github.com/Til7701/Puzzled) | [Collection Spec](/projects/puzzled/collection-spec)
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application for Linux to solve polyform puzzles in
@@ -5,8 +7,8 @@ various formats.
 It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with your current
 approach.
 
-![The puzzle selection](/assets/images/puzzled/screenshot-start-dark.png){data-external="1"}
-![While solving a puzzle](/assets/images/puzzled/screenshot-year-dark.png){data-external="1"}
+![The puzzle selection](/assets/images/puzzled/screenshot-start-dark.png){data-external="1" width=100%}
+![While solving a puzzle](/assets/images/puzzled/screenshot-year-dark.png){data-external="1" width=100%}
 
 This is the first project I am developing using Adwaita, GTK and Rust.
 
