@@ -39,6 +39,14 @@ flatpak install flathub de.til7701.Puzzled
 
 [Install from Flathub](https://flathub.org/en/apps/de.til7701.Puzzled) | [GitHub Releases](https://github.com/Til7701/Puzzled/releases)
 
+### 1.2.0 (2026-04-26)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.2.0)
+
+- Updated to Gnome 50.
+- Added more puzzles to the Tetromino and Pentomino collections.
+- Fixed display bugs when loading an already loaded community collection.
+
 ### 1.1.0 (2026-03-27)
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.1.0)
@@ -51,27 +59,27 @@ flatpak install flathub de.til7701.Puzzled
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.0.1)
 
-- Update icon and description for Flathub.
+- Updated icon and description for Flathub.
 - Set log level to info.
 
 ### 1.0.0 (2026-03-10)
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.0.0)
 
-- Add more puzzles to the Hexomino and Tromino collections.
+- Added more puzzles to the Hexomino and Tromino collections.
 - You now get stars for solving puzzles using fewer hints.
-- Improve solver feedback, if no solution is available.
-- Allow marking puzzles as unsolvable.
+- Improved solver feedback, if no solution is available.
+- Allowed marking puzzles as unsolvable.
 - Fixed name for menu entry for about dialog.
 
 ### 0.4.0 (2026-02-22)
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v0.4.0)
 
-- Update collection selection list.
+- Updated collection selection list.
 - Grid lines can now be shown on the board.
 - Added a How to Play dialog.
-- Fix flickering lines on tiles when moving them.
+- Fixed flickering lines on tiles when moving them.
 - When deleting a community collection, another collection is now selected.
 - For each collection the average difficulty is now shown.
 - The amount of cells to fill on the board is now shown for each puzzle.
@@ -80,10 +88,10 @@ flatpak install flathub de.til7701.Puzzled
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v0.3.1)
 
-- Disallow moving tile out of the puzzle area.
-- Fix last tile hint showing up when opening another puzzle.
-- Fix unused tile detection.
-- Update layout when window size changes in any way.
+- Disallowed moving tile out of the puzzle area.
+- Fixed last tile hint showing up when opening another puzzle.
+- Fixed unused tile detection.
+- Updated layout when window size changes in any way.
 
 ### 0.3.0 (2026-02-16)
 
