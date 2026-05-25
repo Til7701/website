@@ -33,8 +33,7 @@ Adds a tray icon to show the current battery percentage for Windows devices.
 It uses JNI and FFM to call Windows libraries to get the battery status.
 It also allows setting the power plan by right-clicking the tray icon.
 
-This is the first of my projects that other people have found and used.
-It is also the first project that received stars on GitHub.
+As far as I know, this is the first of my projects that other people have found and used.
 Unfortunately, I did not continue development on it, because I do not use Windows anymore.
 
 ---
@@ -69,7 +68,7 @@ This is part of the Ze Impressive Schwifty project, but has its own repository.
 
 [GitHub](https://github.com/schlunzis/ppa)
 
-A personal package archive (PPA) for Ubuntu-based Linux distributions.
+A personal package archive (PPA) for Debian-based Linux distributions.
 It allows users to easily install and update software packages that we are developing.
 The PPA is hosted with the same hosting provider (Alfahosting) as this website.
 Instructions to add the PPA can be found in the GitHub repository linked above.

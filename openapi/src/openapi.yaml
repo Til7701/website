@@ -4,6 +4,7 @@ info:
   version: 1.0.0
 
 servers:
+  - url: https://tilman.holube.de/api/v1
   - url: https://til7701.de/api/v1
 
 paths:

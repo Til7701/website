@@ -173,6 +173,10 @@ class HardcodedPostDAO implements PostDAO
                 "https://github.com/Til7701",
                 "GitHub"
             ),
+            new ExternalLink(
+                "https://codeberg.org/Til7701",
+                "Codeberg"
+            ),
             new Separator(),
             new Post("/impressum",
                 "Impressum",

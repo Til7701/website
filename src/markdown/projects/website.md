@@ -17,6 +17,12 @@ files are processed and the result is copied there during the build process. To 
 the website, I recomment taking a look at the GitHub Action that deploys the website, which can be found in the
 `.github/workflows/deploy.yml` file.
 
+## Domains
+
+Initially, this website was only available via [til7701.de](https://til7701.de). However, as the website grew and
+more content was added, I switched to [tilman.holube.de](https://tilman.holube.de). Now the website is reachable
+via both domains.
+
 ## Content (Markdown)
 
 The content of most of the pages like this one is written in Markdown and stored in the `src/markdown` directory.
