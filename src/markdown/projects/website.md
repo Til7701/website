@@ -20,8 +20,8 @@ the website, I recomment taking a look at the GitHub Action that deploys the web
 ## Domains
 
 Initially, this website was only available via [til7701.de](https://til7701.de). However, as the website grew and
-more content was added, I switched to [tilman.holube.de](https://tilman.holube.de). Now the website is reachable
-via both domains.
+more content was added, I also added [tilman.holube.de](https://tilman.holube.de) for more official use cases. Now the
+website is reachable via both domains, which will remain for the foreseeable future.
 
 ## Content (Markdown)
 
