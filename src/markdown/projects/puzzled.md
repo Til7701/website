@@ -39,6 +39,13 @@ flatpak install flathub de.til7701.Puzzled
 
 [Install from Flathub](https://flathub.org/en/apps/de.til7701.Puzzled) | [GitHub Releases](https://github.com/Til7701/Puzzled/releases)
 
+### 1.2.1 (2026-05-31)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.2.1)
+
+- Fixed shortcut keys in shortcut dialog.
+- The Community Collection explanation pop over now links to my website and not GitHub.
+
 ### 1.2.0 (2026-04-26)
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.2.0)
