@@ -31,4 +31,5 @@
     ?>
 
     <link rel="me" href="https://mastodon.social/@til7701"/>
+    <meta name="fediverse:creator" content="@til7701@mastodon.social">
 </head>
