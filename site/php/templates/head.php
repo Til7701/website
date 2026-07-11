@@ -30,5 +30,5 @@
     }
     ?>
 
-    <a rel="me" href="https://mastodon.social/@til7701">Mastodon</a>
+    <link rel="me" href="https://mastodon.social/@til7701"/>
 </head>
