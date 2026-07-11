@@ -29,4 +29,6 @@
         <?php
     }
     ?>
+
+    <a rel="me" href="https://mastodon.social/@til7701">Mastodon</a>
 </head>
