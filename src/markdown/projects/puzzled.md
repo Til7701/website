@@ -3,9 +3,8 @@
 [Source Code (GitHub)](https://github.com/Til7701/Puzzled) | [Collection Spec](/projects/puzzled/collection-spec)
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application for Linux to solve polyform puzzles in
-various formats.
-It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with your current
-approach.
+various formats. It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with
+your current approach.
 
 ![The puzzle selection](/assets/images/puzzled/screenshot-start-dark.png){data-external="1" width=100%}
 ![While solving a puzzle](/assets/images/puzzled/screenshot-year-dark.png){data-external="1" width=100%}
@@ -13,19 +12,17 @@ approach.
 This is the first project I am developing using Adwaita, GTK and Rust.
 
 I first saw Puzzle A Day in Canada while studying abroad and liked it so much, that I brought it back to Germany with
-me.
-After solving it every day for a year, I wanted to know how many solutions there are.
-So I wrote a solver in Java which can be found [here](https://github.com/Til7701/puzzle-a-day).
-After finding all solutions for the default layout, I tried out various other layouts.
-However, I had to recompile for each layout change, and it was not very user-friendly.
-Thus, I decided to use this project to make myself familiar with Rust and GTK development and provide a more
-user-friendly interface.
+me. After solving it every day for a year, I wanted to know how many solutions there are. So I wrote a solver in Java
+which can be found [here](https://github.com/Til7701/puzzle-a-day). After finding all solutions for the default layout,
+I tried out various other layouts. However, I had to recompile for each layout change, and it was not very
+user-friendly. Thus, I decided to use this project to make myself familiar with Rust and GTK development and provide a
+more user-friendly interface.
 
-You can solve any Polyomino puzzle with Puzzled, as long as you can provide the layout in the correct format.
-You can create your own puzzle layouts and load them into the application.
-In order for Puzzled to import the layouts, you have to create a JSON file following the specification defined
-[here](/projects/puzzled/collection-spec).
-If you have any problems with creating your own collection, feel free to open an issue on GitHub.
+You can solve any Polyomino puzzle with Puzzled, as long as you can provide the layout in the correct format. You can
+create your own puzzle layouts and load them into the application. In order for Puzzled to import the layouts, you have
+to create a JSON file following the specification defined
+[here](/projects/puzzled/collection-spec). If you have any problems with creating your own collection, feel free to open
+an issue on GitHub.
 
 ## Installation
 
@@ -38,6 +35,21 @@ flatpak install flathub de.til7701.Puzzled
 ## Releases
 
 [Install from Flathub](https://flathub.org/en/apps/de.til7701.Puzzled) | [GitHub Releases](https://github.com/Til7701/Puzzled/releases)
+
+### 1.2.3 (2026-08-29)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.2.3)
+
+- Greatly improved the solver performance for hints.
+- Fixed the color of the hint tile if there are more than one of the same shape.
+- Fixed recently moved tiles not being on top of other tiles.
+
+### 1.2.2 (2026-08-20)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.2.2)
+
+- Slightly redesigned the puzzle selection page header.
+- Fixed a bug where community collections could not be saved.
 
 ### 1.2.1 (2026-05-31)
 
@@ -104,9 +116,9 @@ flatpak install flathub de.til7701.Puzzled
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v0.3.1)
 
-- Instead of getting solvability-feedback every time you move a tile, you now have to request a
-  hint. This hint either shows a transparent tile where one should be placed or tells you that the
-  puzzle cannot be solved with the current approach.
+- Instead of getting solvability-feedback every time you move a tile, you now have to request a hint. This hint either
+  shows a transparent tile where one should be placed or tells you that the puzzle cannot be solved with the current
+  approach.
 - Solved puzzles are now marked as such.
 - You can now jump directly to the next puzzle in the collection after finding a solution.
 - Collections can now declare, that the puzzles should be solved in a linear order.
@@ -119,8 +131,8 @@ flatpak install flathub de.til7701.Puzzled
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v0.2.0)
 
-From this release onward, Puzzle More Days has been renamed to Puzzled.
-This release also includes a basic restructure of the application.
+From this release onward, Puzzle More Days has been renamed to Puzzled. This release also includes a basic restructure
+of the application.
 
 - Puzzles are now organised in collections.
 - Collections can be loaded at runtime.
@@ -130,7 +142,6 @@ This release also includes a basic restructure of the application.
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v0.1.0)
 
-First Release of Puzzle More Days, including the default layout and
-a layout with a two-digit year. Potential errors are highlighted
-and a solver predicts the solvability of the current approach.
+First Release of Puzzle More Days, including the default layout and a layout with a two-digit year. Potential errors are
+highlighted and a solver predicts the solvability of the current approach.
 
