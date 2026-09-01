@@ -115,7 +115,7 @@ class HardcodedPostDAO implements PostDAO
                                 js: ["code-block-copy"],
                                 showInNav: false
                             )],
-                        css: ["code-blocks", "code-blocks-bash", "puzzled"],
+                        css: ["code-blocks", "code-blocks-bash", "special/puzzled"],
                         js: ["code-block-copy"],
                     ),
                 ],
