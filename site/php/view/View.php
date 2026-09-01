@@ -7,12 +7,20 @@ use model\NavEntry;
 class View
 {
 
+    private string $nav_template = "navigation.php";
+    private ?string $toc_template = null;
     private array $templates = array();
     private array $postHierarchy = array();
     private ?NavEntry $currentPost = null;
     private string $title = "Til7701";
     private array $cssFiles = array();
     private array $jsFiles = array();
+
+    public function setTocTemplate(?string $toc_template): View
+    {
+        $this->toc_template = $toc_template;
+        return $this;
+    }
 
     public function setTemplates($templates): View
     {
@@ -53,6 +61,8 @@ class View
     public function render(): string
     {
         # store in local variables for easier access
+        $nav_template = $this->nav_template;
+        $toc_template = $this->toc_template;
         $templates = $this->templates;
         $post_hierarchy = $this->postHierarchy;
         $current_post = $this->currentPost;
@@ -69,10 +79,31 @@ class View
         <body>
         <?php
         include "php/templates/header.php";
+        include "php/templates/" . $nav_template;
+        ?>
+        <main>
+            <?php
+            if ($toc_template !== null) {
+                ?>
+                <section class="toc">
+                    <h2>Table of Contents</h2>
+                    <?php
+                    include "php/templates/" . $toc_template;
+                    ?>
+                </section>
+                <?php
+            }
 
-        foreach ($templates as $template) {
-            include "php/templates/" . $template;
-        }
+            ?>
+            <article>
+                <?php
+                foreach ($templates as $template) {
+                    include "php/templates/" . $template;
+                }
+                ?>
+            </article>
+        </main>
+        <?php
 
         include "php/templates/footer.php";
         ?>

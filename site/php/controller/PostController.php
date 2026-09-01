@@ -26,13 +26,11 @@ class PostController
 
         if ($currentPost instanceof Post) {
             $css = $currentPost->getCss();
-            if (!$currentPost->isShowToC()) {
-                $css[] = "hidden-toc";
-            }
             $view = (new View())
                 ->setPostHierarchy($posts)
                 ->setCurrentPost($currentPost)
-                ->setTemplates(array("navigation.php", $currentPost->getTemplate()))
+                ->setTocTemplate($currentPost->getTocTemplate())
+                ->setTemplates($currentPost->getTemplates())
                 ->setTitle($currentPost->getTitle())
                 ->setCss($css)
                 ->setJs($currentPost->getJs());

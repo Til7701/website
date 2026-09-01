@@ -10,24 +10,24 @@ class PostGroup extends Post implements NavEntry
     public function __construct(
         string $path,
         string $title,
-        string $template,
+        string $toc_template,
+        array  $templates,
         array  $posts,
         array  $css = [],
         array  $js = [],
         bool   $showInNav = true,
         bool   $allowAccess = true,
-        bool   $showToC = true,
     )
     {
         parent::__construct(
             $path,
             $title,
-            $template,
+            $toc_template,
+            $templates,
             $css,
             $js,
             $showInNav,
             $allowAccess,
-            $showToC,
         );
         $this->posts = $posts;
     }

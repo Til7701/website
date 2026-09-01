@@ -1,0 +1,43 @@
+:root {
+    --dark-brand-color: #C74402;
+    --light-brank-color: #FEA500;
+
+    --brand-color: var(--dark-brand-color);
+    --accent-color: var(--light-brank-color);
+
+    @media (prefers-color-scheme: light) {
+        --brand-color: var(--light-brank-color);
+        --accent-color: var(--dark-brand-color);
+    }
+}
+
+.puzzled-special {
+    background-color: var(--brand-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    .branding {
+        margin: 0 auto;
+        width: max-content;
+        display: flex;
+        flex-direction: row;
+
+        img {
+            width: 5rem;
+            margin: 0;
+        }
+
+        .title {
+            margin: auto 0;
+
+            h1 {
+                margin: 0 auto;
+            }
+
+            p {
+                margin: 0 auto;
+            }
+        }
+    }
+}

@@ -1,5 +1,3 @@
-![](/assets/icons/de.til7701.Puzzled.svg){data-external="1" width=20% alt="Icon"}
-
 <div class="flex-horizontal center">
 
 [Source Code (GitHub)](https://github.com/Til7701/Puzzled){.accent-button .button}
