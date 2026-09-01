@@ -85,7 +85,11 @@ class HardcodedPostDAO implements PostDAO
             new Post("/",
                 "Home",
                 null,
-                ["from-markdown/home_content.html"],
+                [
+                    "from-markdown/home_content.html",
+                    "special/home.html",
+                ],
+                css: ["special/home"],
             ),
             new PostGroup("/projects",
                 "Projects",

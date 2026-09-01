@@ -38,9 +38,9 @@ class PostController
             http_response_code(404);
             $view = (new View())
                 ->setPostHierarchy($posts)
-                ->setTemplates(array("navigation.php", "error/pageNotFound.php"))
+                ->setTemplates(array("error/pageNotFound.php"))
                 ->setTitle("Page not found")
-                ->setCss(array("hidden-toc", "error-page"));
+                ->setCss(array("error-page"));
         }
         return $view->render();
     }
