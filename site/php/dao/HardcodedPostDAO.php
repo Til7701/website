@@ -170,6 +170,10 @@ class HardcodedPostDAO implements PostDAO
             ),
             new Separator(),
             new ExternalLink(
+                "https://mastodon.social/@til7701",
+                "Mastodon"
+            ),
+            new ExternalLink(
                 "https://github.com/Til7701",
                 "GitHub"
             ),
