@@ -1,13 +1,24 @@
 ![](/assets/icons/de.til7701.Puzzled.svg){data-external="1" width=20% alt="Icon"}
 
-[Source Code (GitHub)](https://github.com/Til7701/Puzzled) | [Collection Spec](/projects/puzzled/collection-spec)
+<div class="flex-horizontal center">
+
+[Source Code (GitHub)](https://github.com/Til7701/Puzzled){.accent-button .button}
+
+[Collection Spec](/projects/puzzled/collection-spec){.accent-button .button}
+
+</div>
 
 An [Adwaita](https://gnome.pages.gitlab.gnome.org/libadwaita/) application for Linux to solve polyform puzzles in
 various formats. It can tell you, if you are on the right track or, whether it is impossible to solve the puzzle with
 your current approach.
 
+<div class="flex-horizontal">
+
 ![The puzzle selection](/assets/images/puzzled/screenshot-start-dark.png){data-external="1" width=100%}
+
 ![While solving a puzzle](/assets/images/puzzled/screenshot-year-dark.png){data-external="1" width=100%}
+
+</div>
 
 This is the first project I am developing using Adwaita, GTK and Rust.
 
@@ -34,7 +45,13 @@ flatpak install flathub de.til7701.Puzzled
 
 ## Releases
 
-[Install from Flathub](https://flathub.org/en/apps/de.til7701.Puzzled) | [GitHub Releases](https://github.com/Til7701/Puzzled/releases)
+<div class="flex-horizontal">
+
+[Install from Flathub](https://flathub.org/en/apps/de.til7701.Puzzled){.accent-button .button}
+
+[GitHub Releases](https://github.com/Til7701/Puzzled/releases){.accent-button .button}
+
+</div>
 
 ### 1.2.3 (2026-08-29)
 

@@ -93,12 +93,23 @@ body {
 }
 
 .button {
+    width: max-content;
     border: none;
-    padding: 0.33rem;
+    padding: 0.4rem 0.8rem;
     margin: 0.3rem;
     cursor: pointer;
     border-radius: var(--border-radius);
-    display: block;
+    text-decoration: none;
+}
+
+.filled-button {
+    background-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.accent-button {
+    outline: 1px solid var(--accent-color);
+    color: var(--text-color);
 }
 
 a {
