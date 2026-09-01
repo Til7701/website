@@ -3,7 +3,7 @@
 set -e
 
 COMMIT_HASH=$(git rev-parse --short HEAD)
-if [[ $(git diff --stat) != '' ]]; then
+if [[ "$(git diff --stat)" != '' ]]; then
   GIT_TREE_STATE=dirty
 else
   GIT_TREE_STATE=clean

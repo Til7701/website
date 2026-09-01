@@ -26,5 +26,5 @@ services:
       - ./:/app
     entrypoint: >
       sh -c "while inotifywait -r -e modify,create,delete /app/src/markdown /app/src/html; do
-               sh scripts/convert.sh;
+               sh scripts/convert.sh && sh scripts/build-info.sh;
              done"
