@@ -20,9 +20,10 @@ main {
 
     .toc {
         order: 2;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         width: max-content;
         position: sticky;
+        top: 0;
         align-self: flex-start;
         padding: 1rem;
 
@@ -40,8 +41,8 @@ main {
             }
 
             li {
-                margin-top: 0.25rem;
-                margin-bottom: 0.25rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
                 position: relative;
             }
 
