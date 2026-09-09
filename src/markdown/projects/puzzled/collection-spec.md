@@ -364,7 +364,7 @@ Returns the value as is.
 
 ```json
 {
-    "type": "PLain"
+    "type": "Plain"
 }
 ```
 
