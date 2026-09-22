@@ -1,0 +1,16 @@
+main {
+    .project {
+        margin: 1rem 0;
+        padding: 0.8rem;
+        background: var(--secondary-background-color);
+        border-radius: var(--border-radius);
+
+        h2, h3, h4 {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -123,6 +123,7 @@ class HardcodedPostDAO implements PostDAO
                         js: ["code-block-copy"],
                     ),
                 ],
+                css: ["special/projects"],
             ),
             new Separator(),
             new Post("/api-docs",

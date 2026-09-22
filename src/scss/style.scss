@@ -126,6 +126,7 @@ a[href^="http"]::after {
     width: 0.8em;
     height: 0.8em;
     margin-left: 0.25em;
+    align-self: center;
 
     background-size: 100%;
     background-color: var(--accent-color);
