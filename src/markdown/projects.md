@@ -60,10 +60,11 @@ A small cli application for logging requests to see what they look like.
 
 [GitHub](https://github.com/schlunzis){.accent-button .button}
 
-Schlunzis is a GitHub organization I co-founded with [JayPi4c](https://blog.jaypi4c.de/).
+Schlunzis is an organization [JayPi4c](https://blog.jaypi4c.de/) an I co-founded.
 We are working on and off on various projects together.
-You can interpret the name as the German word or as an acronym for "**S**harp-minded **C**oders **H**andcrafting **L**
-imitless **U**tilities **N**amed **Z**e **I**mpressive **S**chwifty"
+You can interpret the name as the German word or as an acronym for 
+"**S**harp-minded **C**oders **H**andcrafting **L**imitless **U**tilities
+**N**amed **Z**e **I**mpressive **S**chwifty"
 
 :::project
 
