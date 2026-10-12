@@ -51,6 +51,13 @@ flatpak install flathub de.til7701.Puzzled
 
 </div>
 
+### 1.2.4 (2026-10-12)
+
+[Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.2.4)
+
+- Updated to Gnome 51.
+- Fixed scroll positon when selecting a collection.
+
 ### 1.2.3 (2026-08-29)
 
 [Download from GitHub](https://github.com/Til7701/Puzzled/releases/tag/v1.2.3)
