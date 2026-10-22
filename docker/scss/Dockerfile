@@ -1,3 +1,3 @@
-FROM node:alpine3.23
+FROM node:alpine3.24
 
 RUN npm install -g sass
