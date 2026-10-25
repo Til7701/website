@@ -49,7 +49,7 @@ jobs:
           lftp -u "${{ secrets.FTP_USER }}","${{ secrets.FTP_SECRET }}" "${{ secrets.FTP_HOST }}" <<EOF
           mirror --reverse --verbose --delete --parallel=2 \
             --exclude=.cagefs \
-            --exclude=.cl.cagefs \
+            --exclude=.cl.selector \
             --exclude=cgi-bin \
             site /
           quit
