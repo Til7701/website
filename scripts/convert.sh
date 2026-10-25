@@ -40,6 +40,7 @@ find "$SRC_DIR" -type f -name "*.md" | while read -r md_file; do
       --embed-resources \
       --strip-comments \
        --lua-filter="src/pandoc/filters/wrap-tables.lua" \
+       --syntax-definition="src/pandoc/syntax-highlighting/fluxus.xml" \
       -o "$content_html_file"
 
     echo "Converting $md_file to $toc_html_file using $TOC_TEMPLATE_FILE..."

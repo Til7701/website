@@ -1,0 +1,52 @@
+pre.fluxus {
+    --cf-color: var(--accent-color);
+    --kw-color: #EA850B;
+    --cn-color: #00E0E0;
+    --st-color: #10D070;
+    --co-color: #959595;
+    --va-color: #a378ff;
+    --ex-color: #fffce4;
+    --fu-color: #7195ff;
+
+    @media (prefers-color-scheme: light) {
+        --kw-color: #AE630B;
+        --cn-color: #009090;
+        --st-color: #109030;
+        --co-color: #656565;
+        --va-color: #6227b3;
+        --ex-color: #473800;
+        --fu-color: #344fae;
+    }
+
+    .cf {
+        color: var(--cf-color);
+    }
+
+    .kw {
+        color: var(--kw-color);
+    }
+
+    .cn {
+        color: var(--cn-color);
+    }
+
+    .st {
+        color: var(--st-color);
+    }
+
+    //.va {
+    //    color: var(--va-color);
+    //}
+
+    .ex {
+        color: var(--ex-color);
+    }
+
+    .fu {
+        color: var(--fu-color);
+    }
+
+    .co {
+        color: var(--co-color);
+    }
+}

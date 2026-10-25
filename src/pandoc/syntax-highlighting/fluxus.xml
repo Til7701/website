@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language
+        [
+                ]>
+
+<language name="Fluxus" version="1" kateversion="5.53" section="Scripts"
+          extensions="*.flx" indenter="cstyle"
+          author="Tilman Holube (info@holube.de)"
+          license="GPL-3"
+          casesensitive="true"
+>
+
+    <highlighting>
+        <list name="keywords">
+            <item>class</item>
+            <item>let</item>
+            <item>do</item>
+            <item>static</item>
+            <item>as</item>
+            <item>import</item>
+            <item>this</item>
+            <item>new</item>
+        </list>
+
+        <list name="constants">
+            <item>true</item>
+            <item>false</item>
+        </list>
+
+        <list name="controlflow">
+            <item>when</item>
+            <item>return</item>
+        </list>
+
+        <contexts>
+            <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text">
+                <StringDetect attribute="Import" context="import" String="import" lookAhead="true"/>
+                <keyword attribute="Keyword" context="#stay" String="keywords"/>
+                <keyword attribute="ControlFlow" context="#stay" String="controlflow"/>
+                <DetectChar attribute="String" context="string" char="&quot;"/>
+                <StringDetect attribute="Comment" context="comment" String="//"/>
+                <RegExpr attribute="NumberLiteral" String="[0-9]+(\.[0-9]+)?[IUF][0-9]+"/>
+                <keyword attribute="Constant" String="constants"/>
+                <RegExpr attribute="MethodName" String="\b[a-z][a-zA-Z_0-9]*(?=\()"/>
+                <RegExpr attribute="SymbolIdent" String="[a-z][a-zA-Z_0-9]*"/>
+                <RegExpr attribute="TypeIdent" String="[A-Z][a-zA-Z_0-9]*"/>
+            </context>
+            <context attribute="Import" lineEndContext="#stay" name="import">
+                <keyword attribute="Keyword" context="#stay" String="keywords"/>
+                <DetectChar attribute="Import" context="#pop" char=";"/>
+            </context>
+            <context attribute="String" lineEndContext="#stay" name="string">
+                <DetectChar attribute="String" context="#pop" char="&quot;"/>
+            </context>
+            <context attribute="Comment" lineEndContext="#pop" name="comment"/>
+        </contexts>
+        <itemDatas>
+            <itemData name="Normal Text" defStyleNum="dsNormal"/>
+            <itemData name="Import" defStyleNum="dsImport"/>
+            <itemData name="Keyword" defStyleNum="dsKeyword"/>
+            <itemData name="ControlFlow" defStyleNum="dsControlFlow"/>
+            <itemData name="String" defStyleNum="dsString"/>
+            <itemData name="Comment" defStyleNum="dsComment"/>
+            <itemData name="NumberLiteral" defStyleNum="dsConstant"/>
+            <itemData name="Constant" defStyleNum="dsConstant"/>
+            <itemData name="SymbolIdent" defStyleNum="dsVariable"/>
+            <itemData name="TypeIdent" defStyleNum="dsExtension"/>
+            <itemData name="MethodName" defStyleNum="dsFunction"/>
+        </itemDatas>
+        <general>
+            <keywords casesensitive="1"/>
+        </general>
+    </highlighting>
+
+</language>
