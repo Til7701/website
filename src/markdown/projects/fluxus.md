@@ -1,7 +1,7 @@
 [Source Code (GitHub)](https://github.com/Til7701/Fluxus){.accent-button .button}
 
 Fluxus is an absolutely serious, low performance, interpreted programming language implemented in Java.
-It features almost arbitrary width integers and no loops or if-statements.
+It features almost arbitrary width integers and no loops nor if-statements.
 
 Hello World can look like this in a class:
 
@@ -119,7 +119,7 @@ System.println(0U32 as Str); // prints 0
 
 ### Conditionals
 
-There are not `if`-statements or loops. Both are very inferior and therefore replaced with `when` statements.
+There are no if-statements or loops. Both are very inferior and therefore replaced with when-statements.
 Whenever a variable in the condition changes, it is reevaluated and the body is executed if the condition is `true`.
 
 ```fluxus
@@ -128,8 +128,27 @@ when x < 10I32 {
 }
 ```
 
-To evaluate the condition without another reassignment, you can prefix the `when`-statement with `do`.
-The following prints the numbers from 0 to 9.
+To evaluate the condition instantly without another reassignment, you can prefix the when-statement with `do`.
+
+```fluxus
+do when x < 10I32 {
+    //...
+}
+```
+
+Thus, the archaic if-statements and loops can be implemented using when much more elegant.
+If-statements:
+
+```fluxus
+do when a && b {
+    ...
+}
+do when !(a && b) {
+    ...
+}
+```
+
+for / while loops:
 
 ```fluxus
 let i = 0I32;
@@ -138,3 +157,5 @@ do when i < 10I32 {
     i = i + 1I32;
 }
 ```
+
+If you want to avoid triggering the when-statement multiple times, you need to create variables with the `new` keyword.
