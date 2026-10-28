@@ -159,3 +159,12 @@ do when i < 10I32 {
 ```
 
 If you want to avoid triggering the when-statement multiple times, you need to create variables with the `new` keyword.
+
+## Scripts
+
+One way to use Fluxus is to write a script. Script are essentially a method body and a set of imports. There are no
+methods or functions.
+
+## Classes
+
+
